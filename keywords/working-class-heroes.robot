@@ -94,7 +94,7 @@ Setup Working Class Heroes With Voucher Clear DB Data
 
 Get Hero Owe Money API
     [Documentation]    Calling Get Request To Get Whether Hero Owes Money
-    [Arguments]    ${natid}
+    [Arguments]    ${natid}    ${expected_status}
     ${natid_no}=    Remove String    ${natid}    natid-
     ${query_params}=    Set Variable    natid=${natid_no}
     Log And Log To Console    \n\nCalling API To Get Whether Hero Owes Money ${create_hero_api}\n
