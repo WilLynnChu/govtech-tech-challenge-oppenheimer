@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.11.2 on darwin)" generated="2024-11-22T12:18:57.573310" rpa="false" schemaversion="5">
+<suite id="s1" name="US5-Get-Hero-Owe-Money-API" source="/Users/willynn/Documents/Personal Repo/qe-tech-challenge/qe-tech-challenge/test-cases/US5-Get-Hero-Owe-Money-API.robot">
+<kw name="Suite Setup Clean Reports" owner="generic" type="SETUP">
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2024-11-22T12:18:57.704817" level="INFO" html="true">Directory '&lt;a href="file:///Users/willynn/Documents/Personal Repo/qe-tech-challenge/qe-tech-challenge/reports"&gt;/Users/willynn/Documents/Personal Repo/qe-tech-challenge/qe-tech-challenge/reports&lt;/a&gt;' already exists.</msg>
+<arg>${REPORT_DIR}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2024-11-22T12:18:57.704729" elapsed="0.000114"/>
+</kw>
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2024-11-22T12:18:57.705211" level="INFO" html="true">Created directory '&lt;a href="file:///Users/willynn/Documents/Personal Repo/qe-tech-challenge/qe-tech-challenge/reports/screenshots"&gt;/Users/willynn/Documents/Personal Repo/qe-tech-challenge/qe-tech-challenge/reports/screenshots&lt;/a&gt;'.</msg>
+<arg>${SCREENSHOT_DIR}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2024-11-22T12:18:57.705084" elapsed="0.000149"/>
+</kw>
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2024-11-22T12:18:57.705374" level="INFO" html="true">Created directory '&lt;a href="file:///Users/willynn/Documents/Personal Repo/qe-tech-challenge/qe-tech-challenge/reports/downloads"&gt;/Users/willynn/Documents/Personal Repo/qe-tech-challenge/qe-tech-challenge/reports/downloads&lt;/a&gt;'.</msg>
+<arg>${DOWNLOAD_DIR}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2024-11-22T12:18:57.705283" elapsed="0.000117"/>
+</kw>
+<kw name="Empty Directory" owner="OperatingSystem">
+<msg time="2024-11-22T12:18:57.705515" level="INFO" html="true">Listing contents of directory '&lt;a href="file:///Users/willynn/Documents/Personal Repo/qe-tech-challenge/qe-tech-challenge/reports/screenshots"&gt;/Users/willynn/Documents/Personal Repo/qe-tech-challenge/qe-tech-challenge/reports/screenshots&lt;/a&gt;'.</msg>
+<msg time="2024-11-22T12:18:57.705548" level="INFO" html="true">Emptied directory '&lt;a href="file:///Users/willynn/Documents/Personal Repo/qe-tech-challenge/qe-tech-challenge/reports/screenshots"&gt;/Users/willynn/Documents/Personal Repo/qe-tech-challenge/qe-tech-challenge/reports/screenshots&lt;/a&gt;'.</msg>
+<arg>${SCREENSHOT_DIR}</arg>
+<doc>Deletes all the content from the given directory.</doc>
+<status status="PASS" start="2024-11-22T12:18:57.705452" elapsed="0.000116"/>
+</kw>
+<kw name="Empty Directory" owner="OperatingSystem">
+<msg time="2024-11-22T12:18:57.705666" level="INFO" html="true">Listing contents of directory '&lt;a href="file:///Users/willynn/Documents/Personal Repo/qe-tech-challenge/qe-tech-challenge/reports/downloads"&gt;/Users/willynn/Documents/Personal Repo/qe-tech-challenge/qe-tech-challenge/reports/downloads&lt;/a&gt;'.</msg>
+<msg time="2024-11-22T12:18:57.705695" level="INFO" html="true">Emptied directory '&lt;a href="file:///Users/willynn/Documents/Personal Repo/qe-tech-challenge/qe-tech-challenge/reports/downloads"&gt;/Users/willynn/Documents/Personal Repo/qe-tech-challenge/qe-tech-challenge/reports/downloads&lt;/a&gt;'.</msg>
+<arg>${DOWNLOAD_DIR}</arg>
+<doc>Deletes all the content from the given directory.</doc>
+<status status="PASS" start="2024-11-22T12:18:57.705617" elapsed="0.000095"/>
+</kw>
+<kw name="Set Screenshot Directory" owner="SeleniumLibrary">
+<arg>${SCREENSHOT_DIR}</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" start="2024-11-22T12:18:57.705764" elapsed="0.000087"/>
+</kw>
+<status status="PASS" start="2024-11-22T12:18:57.704278" elapsed="0.001602"/>
+</kw>
+<test id="s1-t1" name="Get Hero Owe Money API - Positive" line="13">
+<kw name="Get Hero Owe Money API" owner="working-class-heroes">
+<kw name="Remove String" owner="String">
+<msg time="2024-11-22T12:18:57.706297" level="INFO">${natid_no} = 1</msg>
+<var>${natid_no}</var>
+<arg>${natid}</arg>
+<arg>natid-</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<status status="PASS" start="2024-11-22T12:18:57.706239" elapsed="0.000071"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-22T12:18:57.706429" level="INFO">${query_params} = natid=1</msg>
+<var>${query_params}</var>
+<arg>natid=${natid_no}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-22T12:18:57.706366" elapsed="0.000072"/>
+</kw>
+<kw name="Log and Log To Console" owner="generic">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-22T12:18:57.706635" level="INFO">
+
+
+Calling API To Get Whether Hero Owes Money http://localhost:9997/api/v1/hero
+</msg>
+<arg>\n${msg}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-22T12:18:57.706587" elapsed="0.000063"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n${msg}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-22T12:18:57.706691" elapsed="0.000057"/>
+</kw>
+<arg>\n\nCalling API To Get Whether Hero Owes Money ${create_hero_api}\n</arg>
+<status status="PASS" start="2024-11-22T12:18:57.706489" elapsed="0.000285"/>
+</kw>
+<kw name="Log and Log To Console" owner="generic">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-22T12:18:57.706969" level="INFO">
+Query Params:
+natid=1
+</msg>
+<arg>\n${msg}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-22T12:18:57.706924" elapsed="0.000060"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n${msg}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-22T12:18:57.707027" elapsed="0.000050"/>
+</kw>
+<arg>Query Params:\n${query_params}\n</arg>
+<status status="PASS" start="2024-11-22T12:18:57.706823" elapsed="0.000276"/>
+</kw>
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2024-11-22T12:18:57.764363" level="INFO">GET Request : url=http://localhost:9997/api/v1/hero/owe-money?natid=1 
+ path_url=/api/v1/hero/owe-money?natid=1 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-11-22T12:18:57.764473" level="INFO">GET Response : url=http://localhost:9997/api/v1/hero/owe-money?natid=1 
+ status=400, reason= 
+ headers={'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Date': 'Fri, 22 Nov 2024 04:18:57 GMT', 'Connection': 'close'} 
+ body={"errorMsg":"Unable to trigger api call","timestamp":"2024-11-22T12:18:57.762166"} 
+ </msg>
+<msg time="2024-11-22T12:18:57.764565" level="INFO">${response} = &lt;Response [400]&gt;</msg>
+<var>${response}</var>
+<arg>${get_hero_owe_money_api}?${query_params}</arg>
+<arg>expected_status=any</arg>
+<doc>Sends a GET request.</doc>
+<status status="PASS" start="2024-11-22T12:18:57.707140" elapsed="0.057441"/>
+</kw>
+<kw name="Log and Log To Console" owner="generic">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-22T12:18:57.765483" level="INFO">
+API Response Response:
+	Expected Status Code:200
+	Actual Status Code: 400
+	Response Body: {"errorMsg":"Unable to trigger api call","timestamp":"2024-11-22T12:18:57.762166"}
+
+</msg>
+<arg>\n${msg}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-22T12:18:57.765407" elapsed="0.000099"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n${msg}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-22T12:18:57.765567" elapsed="0.000085"/>
+</kw>
+<arg>API Response Response:\n\tExpected Status Code:${expected_status}\n\tActual Status Code: ${response.status_code}\n\tResponse Body: ${response.text}\n\n</arg>
+<status status="PASS" start="2024-11-22T12:18:57.764742" elapsed="0.000943"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2024-11-22T12:18:57.766056" level="INFO">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'int'&gt;</msg>
+<msg time="2024-11-22T12:18:57.766126" level="FAIL">200 != 400</msg>
+<arg>${expected_status}</arg>
+<arg>${response.status_code}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="FAIL" start="2024-11-22T12:18:57.765799" elapsed="0.000403">200 != 400</status>
+</kw>
+<return>
+<value>${response}</value>
+<status status="NOT RUN" start="2024-11-22T12:18:57.766243" elapsed="0.000019"/>
+</return>
+<var>${response}</var>
+<arg>natid-1</arg>
+<arg>200</arg>
+<doc>Calling Get Request To Get Whether Hero Owes Money</doc>
+<status status="FAIL" start="2024-11-22T12:18:57.706130" elapsed="0.060197">200 != 400</status>
+</kw>
+<kw name="Validate Json Schema" owner="generic">
+<arg>${json_schema_file_name}</arg>
+<arg>${response.json()}</arg>
+<doc>Validate Json Schema</doc>
+<status status="NOT RUN" start="2024-11-22T12:18:57.766429" elapsed="0.000015"/>
+</kw>
+<kw name="Common Test Teardown" owner="generic" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-11-22T12:18:57.766779" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<arg>${OUTPUT_DIR}/screenshots/${TEST NAME}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-11-22T12:18:57.766690" elapsed="0.000110"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-22T12:18:57.766854" elapsed="0.000045"/>
+</kw>
+<status status="PASS" start="2024-11-22T12:18:57.766572" elapsed="0.000357"/>
+</kw>
+<doc>Testing the positive flow of the get hero owe money api and validate the json schema</doc>
+<status status="FAIL" start="2024-11-22T12:18:57.705912" elapsed="0.061047">200 != 400</status>
+</test>
+<test id="s1-t2" name="Get Hero Owe Money API - Negative" line="18">
+<kw name="Get Hero Owe Money API" owner="working-class-heroes">
+<kw name="Remove String" owner="String">
+<msg time="2024-11-22T12:18:57.767507" level="INFO">${natid_no} = a</msg>
+<var>${natid_no}</var>
+<arg>${natid}</arg>
+<arg>natid-</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<status status="PASS" start="2024-11-22T12:18:57.767440" elapsed="0.000079"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-22T12:18:57.767652" level="INFO">${query_params} = natid=a</msg>
+<var>${query_params}</var>
+<arg>natid=${natid_no}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-22T12:18:57.767577" elapsed="0.000086"/>
+</kw>
+<kw name="Log and Log To Console" owner="generic">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-22T12:18:57.767901" level="INFO">
+
+
+Calling API To Get Whether Hero Owes Money http://localhost:9997/api/v1/hero
+</msg>
+<arg>\n${msg}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-22T12:18:57.767848" elapsed="0.000072"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n${msg}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-22T12:18:57.767971" elapsed="0.000064"/>
+</kw>
+<arg>\n\nCalling API To Get Whether Hero Owes Money ${create_hero_api}\n</arg>
+<status status="PASS" start="2024-11-22T12:18:57.767723" elapsed="0.000341"/>
+</kw>
+<kw name="Log and Log To Console" owner="generic">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-22T12:18:57.768286" level="INFO">
+Query Params:
+natid=a
+</msg>
+<arg>\n${msg}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-22T12:18:57.768237" elapsed="0.000068"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n${msg}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-22T12:18:57.768357" elapsed="0.000064"/>
+</kw>
+<arg>Query Params:\n${query_params}\n</arg>
+<status status="PASS" start="2024-11-22T12:18:57.768119" elapsed="0.000330"/>
+</kw>
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2024-11-22T12:18:57.791953" level="INFO">GET Request : url=http://localhost:9997/api/v1/hero/owe-money?natid=a 
+ path_url=/api/v1/hero/owe-money?natid=a 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-11-22T12:18:57.792017" level="INFO">GET Response : url=http://localhost:9997/api/v1/hero/owe-money?natid=a 
+ status=500, reason= 
+ headers={'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Date': 'Fri, 22 Nov 2024 04:18:57 GMT', 'Connection': 'close'} 
+ body={"timestamp":1732249137790,"status":500,"error":"Internal Server Error","path":"/api/v1/hero/owe-money"} 
+ </msg>
+<msg time="2024-11-22T12:18:57.792094" level="INFO">${response} = &lt;Response [500]&gt;</msg>
+<var>${response}</var>
+<arg>${get_hero_owe_money_api}?${query_params}</arg>
+<arg>expected_status=any</arg>
+<doc>Sends a GET request.</doc>
+<status status="PASS" start="2024-11-22T12:18:57.768504" elapsed="0.023605"/>
+</kw>
+<kw name="Log and Log To Console" owner="generic">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-22T12:18:57.792991" level="INFO">
+API Response Response:
+	Expected Status Code:500
+	Actual Status Code: 500
+	Response Body: {"timestamp":1732249137790,"status":500,"error":"Internal Server Error","path":"/api/v1/hero/owe-money"}
+
+</msg>
+<arg>\n${msg}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-22T12:18:57.792913" elapsed="0.000104"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n${msg}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-22T12:18:57.793081" elapsed="0.000081"/>
+</kw>
+<arg>API Response Response:\n\tExpected Status Code:${expected_status}\n\tActual Status Code: ${response.status_code}\n\tResponse Body: ${response.text}\n\n</arg>
+<status status="PASS" start="2024-11-22T12:18:57.792241" elapsed="0.000955"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2024-11-22T12:18:57.793524" level="INFO">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'int'&gt;</msg>
+<arg>${expected_status}</arg>
+<arg>${response.status_code}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-11-22T12:18:57.793256" elapsed="0.000294"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2024-11-22T12:18:57.793582" elapsed="0.000034"/>
+</return>
+<msg time="2024-11-22T12:18:57.793683" level="INFO">${response} = &lt;Response [500]&gt;</msg>
+<var>${response}</var>
+<arg>natid-a</arg>
+<arg>500</arg>
+<doc>Calling Get Request To Get Whether Hero Owes Money</doc>
+<status status="PASS" start="2024-11-22T12:18:57.767320" elapsed="0.026377"/>
+</kw>
+<kw name="Common Test Teardown" owner="generic" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-11-22T12:18:57.794044" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<arg>${OUTPUT_DIR}/screenshots/${TEST NAME}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-11-22T12:18:57.793959" elapsed="0.000107"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-22T12:18:57.794127" elapsed="0.000047"/>
+</kw>
+<status status="PASS" start="2024-11-22T12:18:57.793831" elapsed="0.000370"/>
+</kw>
+<doc>Testing the negative flow of the get hero owe money api by providing non number natid</doc>
+<status status="PASS" start="2024-11-22T12:18:57.767081" elapsed="0.027153"/>
+</test>
+<doc>Test Suite for User Stories 5 Get Hero Owe Money API</doc>
+<status status="FAIL" start="2024-11-22T12:18:57.573789" elapsed="0.220801"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="US5-Get-Hero-Owe-Money-API">US5-Get-Hero-Owe-Money-API</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-11-22T12:18:57.583907" level="WARN">Error in file '/Users/willynn/Documents/Personal Repo/qe-tech-challenge/qe-tech-challenge/keywords/working-class-heroes.robot' on line 21: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-11-22T12:18:57.584024" level="WARN">Error in file '/Users/willynn/Documents/Personal Repo/qe-tech-challenge/qe-tech-challenge/keywords/working-class-heroes.robot' on line 37: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-11-22T12:18:57.584363" level="WARN">Error in file '/Users/willynn/Documents/Personal Repo/qe-tech-challenge/qe-tech-challenge/keywords/working-class-heroes.robot' on line 105: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-11-22T12:18:57.683976" level="WARN">Error in file '/Users/willynn/Documents/Personal Repo/qe-tech-challenge/qe-tech-challenge/keywords/generic.robot' on line 38: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-11-22T12:18:57.695331" level="WARN">Error in file '/Users/willynn/Documents/Personal Repo/qe-tech-challenge/qe-tech-challenge/keywords/sql-helper.robot' on line 26: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-11-22T12:18:57.695465" level="WARN">Error in file '/Users/willynn/Documents/Personal Repo/qe-tech-challenge/qe-tech-challenge/keywords/sql-helper.robot' on line 41: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>
