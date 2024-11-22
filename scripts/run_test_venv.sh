@@ -1,5 +1,5 @@
 #Create virtual env
-python -m venv oppenheimer
+python3 -m venv oppenheimer
 
 #Activate virtual env
 source oppenheimer/bin/activate
