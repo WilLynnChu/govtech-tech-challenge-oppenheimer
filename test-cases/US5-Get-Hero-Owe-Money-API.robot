@@ -10,11 +10,11 @@ Test Teardown       Common Test Teardown
 ${json_schema_file_name}    US5-json-schema
 
 *** Test Cases ***
-Get Hero Owe Money API - Positive
+Test Case 1 - Get Hero Owe Money API - Positive
     [Documentation]    Testing the positive flow of the get hero owe money api and validate the json schema
     ${response}=    Get Hero Owe Money API    natid-1    200
     Validate Json Schema    ${json_schema_file_name}    ${response.json()}
 
-Get Hero Owe Money API - Negative
+Test Case 2 - Get Hero Owe Money API - Negative
     [Documentation]    Testing the negative flow of the get hero owe money api by providing non number natid
     ${response}=    Get Hero Owe Money API    natid-a    500
