@@ -1,0 +1,22 @@
+${test_case_name},${flow},${natid},${name},${gender},${birthDate},${deathDate},${salary},${taxPaid},${browniePoints},${expectedStatus},${expectedErrMessage}
+Test Case 1 - Positive - Natid - Birth Date - Salary - Tax Paid,Positive,natid-11,John Bosh,MALE,1996-01-01T23:59:59,null,1000.12,10.00,null,200,
+Test Case 2 - Positive - Name,Positive,natid-12,John Cena,MALE,1996-01-01T23:59:59,null,1000.00,10.00,null,200,
+Test Case 3 - Positive - Gender MALE,Positive,natid-13,Chris John,MALE,1996-01-01T23:59:59,null,1000.00,10.00,null,200,
+Test Case 4 - Positive - Gender FEMALE,Positive,natid-14,Sasha NF,FEMALE,1996-01-01T23:59:59,null,1000.00,10.00,null,200,
+Test Case 5 - Positive - Death Date Null,Positive,natid-15,Sasha Lee,FEMALE,1996-01-01T23:59:59,null,1000.00,10.00,null,200,
+Test Case 6 - Positive - Death Date Not Null,Positive,natid-16,Sasha Tan,FEMALE,1996-01-01T23:59:59,2020-01-01T23:59:59,1000.00,10.00,null,200,
+Test Case 7 - Positive - Brownie Points Null,Positive,natid-17,Madeline Haw,FEMALE,1996-01-01T23:59:59,null,1000.00,10.00,null,200,
+Test Case 8 - Positive - Brownie Points Not Null,Positive,natid-18,Jessie Hock,FEMALE,1996-01-01T23:59:59,null,1000.00,10.00,20,200,
+Test Case 9 - Negative - Natid - Wrong Format,Negative,natid-1a,Jennifer Lopez,FEMALE,1996-02-01T23:59:59,null,1001.00,11.00,null,400,Invalid natid
+Test Case 10 - Negative - Natid - Number Above 9999999,Negative,natid-99999990,Jennifer Lopez,FEMALE,1996-02-01T23:59:59,null,1001.00,11.00,null,400,Invalid natid
+Test Case 11 - Negative - Name - Special Character,Negative,natid-21,Jennifer-Lopez,FEMALE,1996-02-01T23:59:59,null,1001.00,11.00,null,400,Invalid name
+Test Case 12 - Negative - Name - Number,Negative,natid-22,Jennifer9Lopez,FEMALE,1996-02-01T23:59:59,null,1001.00,11.00,null,400,Invalid name
+Test Case 13 - Negative - Name - More than 100 characters,Negative,natid-23,Jennifer Lopez Jennifer Lopez Jennifer Lopez Jennifer Lopez Jennifer Lopez Jennifer Lopez Jennifer Lopez,FEMALE,1996-02-01T23:59:59,null,1001.00,11.00,null,400,Name must be between 1 and 100 characters
+Test Case 14 - Negative - Gender - Invalid Capitalisation,Negative,natid-24,John Cena,male,1996-01-01T23:59:59,null,1000.00,10.00,null,400,Invalid gender
+Test Case 15 - Negative - Birth Date - Wrong Format,Negative,natid-25,John Cena,MALE,1996-01-01 23:59:59,null,1000.00,10.00,null,400,Invalid birthdate format
+Test Case 16 - Negative - Birth Date - Future Date,Negative,natid-26,John Cena,MALE,3000-01-01T23:59:59,null,1000.00,10.00,null,400,There are some issues with working class hero
+Test Case 17 - Negative - Death Date - Wrong Format,Negative,natid-27,John Cena,MALE,1996-01-01T23:59:59,2020-21-01T23:59:59,1000.00,10.00,null,400,Invalid deathdate format
+Test Case 18 - Negative - Salary - String,Negative,natid-28,John Cena,MALE,1996-01-01T23:59:59,null,One Thousand,10.00,null,400,
+Test Case 19 - Negative - Salary - Negative Number,Negative,natid-29,John Cena,MALE,1996-01-01T23:59:59,null,-1000.00,10.00,null,400,Salary must be greater than or equals to zero
+Test Case 20 - Negative - Tax Paid - String,Negative,natid-30,John Cena,MALE,1996-01-01T23:59:59,null,1000.00,ten,null,400,
+Test Case 21 - Negative - Tax Paid - Negative Number,Negative,natid-31,John Cena,MALE,1996-01-01T23:59:59,null,1000.00,-10.00,null,400,Tax paid must be greater than or equals to zero
