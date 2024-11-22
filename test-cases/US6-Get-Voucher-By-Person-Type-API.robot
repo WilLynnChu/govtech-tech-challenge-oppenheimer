@@ -10,6 +10,6 @@ Test Teardown       Common Test Teardown
 ${json_schema_file_name}    US6-json-schema
 
 *** Test Cases ***
-Get And Verify Json Schema of Voucher By Person And Type API - Positive
+Test Case 1 - Get And Verify Json Schema of Voucher By Person And Type API - Positive
     ${response}=    Get Voucher By Person And Type API
     Validate Json Schema    ${json_schema_file_name}    ${response.json()}
