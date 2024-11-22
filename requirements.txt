@@ -1,0 +1,10 @@
+robotframework
+robotframework-seleniumlibrary
+robotframework-datadriver
+robotframework-csvlibrary
+robotframework-databaselibrary
+robotframework-requests
+PyMySQL
+mysql-connector-python
+httpx[http2]
+jsonschema
