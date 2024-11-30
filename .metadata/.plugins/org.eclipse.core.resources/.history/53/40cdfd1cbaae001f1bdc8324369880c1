@@ -1,0 +1,131 @@
+package keywords;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertNull;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import objectRepository.APIObject;
+import objectRepository.LoginObject;
+
+public class WorkingClassHeroes extends LoginObject{
+
+    public static void setupWorkingClassHeroesClearDBData(String natid) {
+        Map<String, String> sql_dict = SQLHelper.createSQLDictionary();
+        sql_dict = SQLHelper.addToSQLDictionary(sql_dict, "value_natid", natid);
+        SQLHelper.queryDatabaseAndReturnResult("delete_hero_by_natid", sql_dict);
+    }
+    
+    public static void setupWorkingClassHeroesWithVoucherClearDBData(String natid) {
+        Map<String, String> sql_dict = SQLHelper.createSQLDictionary();
+        sql_dict = SQLHelper.addToSQLDictionary(sql_dict, "value_natid", natid);
+        SQLHelper.queryDatabaseAndReturnResult("delete_voucher", sql_dict);
+        setupWorkingClassHeroesClearDBData(natid);
+    }
+    
+    public static String createHeroAPI(String natid, String name, String gender, String birthDate, String deathDate, String salary, String taxPaid, String browniePoints, String expectedStatus) {
+    	Map<String, String> api_request_payload = SQLHelper.createSQLDictionary();
+    	api_request_payload = SQLHelper.addToSQLDictionary(api_request_payload, "natid", natid);
+    	api_request_payload = SQLHelper.addToSQLDictionary(api_request_payload, "name", name);
+    	api_request_payload = SQLHelper.addToSQLDictionary(api_request_payload, "gender", gender);
+    	api_request_payload = SQLHelper.addToSQLDictionary(api_request_payload, "birthDate", birthDate);
+    	api_request_payload = SQLHelper.addToSQLDictionary(api_request_payload, "deathDate", deathDate);
+    	api_request_payload = SQLHelper.addToSQLDictionary(api_request_payload, "salary", salary);
+    	api_request_payload = SQLHelper.addToSQLDictionary(api_request_payload, "taxPaid", taxPaid);
+    	api_request_payload = SQLHelper.addToSQLDictionary(api_request_payload, "browniePoints", browniePoints);
+    	api_request_payload = SQLHelper.addToSQLDictionary(api_request_payload, "expectedStatus", expectedStatus);
+    	String json_payload_string = APIHelper.convertDictToJsonString(api_request_payload);
+    	String requestBody = APIHelper.postAPI(APIObject.create_hero_api, json_payload_string, expectedStatus);
+    	return requestBody;
+    }
+    
+    public static String createHeroWithVoucherAPI(String natid, String name, String gender, String birthDate, String deathDate, String salary, String taxPaid, String browniePoints,String voucherName, String voucherType, String expectedStatus) {
+    	Map<String, String> voucher_dict = SQLHelper.createSQLDictionary();
+    	voucher_dict = SQLHelper.addToSQLDictionary(voucher_dict, "voucherName", voucherName);
+    	voucher_dict = SQLHelper.addToSQLDictionary(voucher_dict, "voucherType", voucherType);
+    	String voucher_dict_string = APIHelper.convertDictToJsonString(voucher_dict);
+    	List<String> voucher_list_string = new ArrayList<>();
+    	voucher_list_string.add(voucher_dict_string);
+    	Map<String, String> api_request_payload = SQLHelper.createSQLDictionary();
+    	api_request_payload = SQLHelper.addToSQLDictionary(api_request_payload, "natid", natid);
+    	api_request_payload = SQLHelper.addToSQLDictionary(api_request_payload, "name", name);
+    	api_request_payload = SQLHelper.addToSQLDictionary(api_request_payload, "gender", gender);
+    	api_request_payload = SQLHelper.addToSQLDictionary(api_request_payload, "birthDate", birthDate);
+    	api_request_payload = SQLHelper.addToSQLDictionary(api_request_payload, "deathDate", deathDate);
+    	api_request_payload = SQLHelper.addToSQLDictionary(api_request_payload, "salary", salary);
+    	api_request_payload = SQLHelper.addToSQLDictionary(api_request_payload, "taxPaid", taxPaid);
+    	api_request_payload = SQLHelper.addToSQLDictionary(api_request_payload, "browniePoints", browniePoints);
+    	api_request_payload = SQLHelper.addToSQLDictionary(api_request_payload, "vouchers", voucher_list_string.toString());
+    	api_request_payload = SQLHelper.addToSQLDictionary(api_request_payload, "expectedStatus", expectedStatus);
+    	String json_payload_string = APIHelper.convertDictToJsonString(api_request_payload);
+    	String requestBody = APIHelper.postAPI(APIObject.create_hero_voucher_api, json_payload_string, expectedStatus);
+    	return requestBody;
+    }
+    
+    public static void verifyCreateHeroAPIResponseMessage(String responseBody, String expectedErrMsg, String flow) {
+    	String key = "";
+    	if (flow.equals("Positive")) {
+    		key = "message";
+    	} else {
+    		key = "errorMsg";
+    	}
+    	System.out.print("\n\n\n\n\n FLOW: " + flow + "\nkey:" + key + "\n\n\n\n");
+    	String message = APIHelper.extractResponseBodyByKey(responseBody, key);
+  	    System.out.println("Expected Message: " + expectedErrMsg);
+  	    System.out.println("Actual Message: " + message);
+  	    assertEquals(message, expectedErrMsg);
+	}
+    
+    public static void verifyCreatedHeroAgainstDB(String natid, String flow) {
+    	Map<String, String> sql_dict = SQLHelper.createSQLDictionary();
+    	sql_dict = SQLHelper.addToSQLDictionary(sql_dict, "value_natid", natid);
+    	List<Map<String, Object>> response = SQLHelper.queryDatabaseAndReturnResult("select_hero_by_natid", sql_dict);
+    	if (flow.equals("Positive")) {
+        	String db_natid = SQLHelper.getFirstRowKeyValueFromDBResult(response, "natid");
+    		assertEquals(db_natid, natid);
+    	} else {
+    		boolean status = response.isEmpty();
+    		assertEquals(status, true);
+    	}
+    }
+    
+    public static void verifyAPIVoucherAgainstDB(String natid, String voucherName, String voucherType, String flow) {
+    	Map<String, String> sql_dict = SQLHelper.createSQLDictionary();
+    	sql_dict = SQLHelper.addToSQLDictionary(sql_dict, "value_natid", natid);
+    	sql_dict = SQLHelper.addToSQLDictionary(sql_dict, "value_voucherName", voucherName);
+    	sql_dict = SQLHelper.addToSQLDictionary(sql_dict, "value_voucherType", voucherType);
+    	List<Map<String, Object>> response = SQLHelper.queryDatabaseAndReturnResult("select_voucher_by_hero_id", sql_dict);
+    	if (flow.equals("Positive")) {
+        	if (response.isEmpty()) {
+        		throw new AssertionError("Record does not exist in DB");
+        	}
+    	} else {
+        	if (!response.isEmpty()) {
+        		throw new AssertionError("Record should not exist in DB");
+        	}
+		}
+    }
+    
+    public static String getHeroOweMoneyAPI(String natid, String name, String gender, String birthDate, String deathDate, String salary, String taxPaid, String browniePoints, String expectedStatus) {
+    	Map<String, String> api_request_payload = SQLHelper.createSQLDictionary();
+    	api_request_payload = SQLHelper.addToSQLDictionary(api_request_payload, "natid", natid);
+    	api_request_payload = SQLHelper.addToSQLDictionary(api_request_payload, "name", name);
+    	api_request_payload = SQLHelper.addToSQLDictionary(api_request_payload, "gender", gender);
+    	api_request_payload = SQLHelper.addToSQLDictionary(api_request_payload, "birthDate", birthDate);
+    	api_request_payload = SQLHelper.addToSQLDictionary(api_request_payload, "deathDate", deathDate);
+    	api_request_payload = SQLHelper.addToSQLDictionary(api_request_payload, "salary", salary);
+    	api_request_payload = SQLHelper.addToSQLDictionary(api_request_payload, "taxPaid", taxPaid);
+    	api_request_payload = SQLHelper.addToSQLDictionary(api_request_payload, "browniePoints", browniePoints);
+    	api_request_payload = SQLHelper.addToSQLDictionary(api_request_payload, "expectedStatus", expectedStatus);
+    	String json_payload_string = APIHelper.convertDictToJsonString(api_request_payload);
+    	String requestBody = APIHelper.postAPI(APIObject.create_hero_api, json_payload_string, expectedStatus);
+    	return requestBody;
+    }
+}

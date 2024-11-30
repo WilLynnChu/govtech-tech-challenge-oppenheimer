@@ -1,0 +1,17 @@
+import java.nio.file.Path;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class BrowserTest {
+
+	public static void main(String[] args) {
+//		WebDriver driver = new ChromeDriver();
+		Path projectPath = Paths.get("").toAbsolutePath();
+        System.out.println("Project directory: " + projectPath);
+//		WebDriver driver = new FirefoxDriver();
+//		driver.get("https://www.google.com");
+//		driver.close();
+	}
+}

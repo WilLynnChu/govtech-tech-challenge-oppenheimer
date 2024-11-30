@@ -1,0 +1,21 @@
+package objectRepository;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class TemplateObject {
+	
+	static WebElement element = null;
+	
+	public static WebElement btn_name_page(WebDriver driver) {
+		
+		element = driver.findElement(By.id(""));
+		return element;
+	}
+	
+	public static WebElement lbl_header_bk(WebDriver driver) {
+		element = driver.findElement(By.xpath("//xpath"));
+		return element;
+	}
+}

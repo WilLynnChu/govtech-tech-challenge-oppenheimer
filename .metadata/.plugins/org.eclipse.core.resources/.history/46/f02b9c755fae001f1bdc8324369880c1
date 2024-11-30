@@ -1,0 +1,71 @@
+package testCases;
+
+
+import keywords.GenericKeywords;
+import keywords.Login;
+import keywords.SQLHelper;
+import keywords.WorkingClassHeroes;
+
+import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVParser;
+import org.apache.commons.csv.CSVRecord;
+import org.testng.annotations.DataProvider;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+public class US1CreateHeroAPI extends WorkingClassHeroes{
+	
+	@BeforeTest
+	public void testSetUp() {
+		GenericKeywords.clearTestOutput(GenericKeywords.test_output_path);
+	}
+	
+	@DataProvider(name = "csvDataProvider")
+    public Iterator<Object[]> getCsvData() throws IOException {
+        String csvFilePath = GenericKeywords.test_data_path + "/US1-data.csv"; // Update with your CSV file path
+        List<Object[]> data = new ArrayList<>();
+
+        try (FileReader fileReader = new FileReader(csvFilePath);
+             CSVParser csvParser = new CSVParser(fileReader, CSVFormat.DEFAULT.withHeader())) { // Use this to set the first row as header
+
+            for (CSVRecord record : csvParser) {
+                String testCaseName = record.get("${test_case_name}"); // Use the header column name
+                // Add other columns as needed
+                data.add(new Object[]{testCaseName, record});
+            }
+        }
+
+        return data.iterator();
+    }
+
+    @Test(dataProvider = "csvDataProvider", testName = testCaseName)
+    public void testWithCsvData(String testCaseName, CSVRecord record) {
+        System.out.println("Running test: " + testCaseName);
+        String natid = record.get("${natid}");
+        String flow = record.get("${flow}");
+        String name = record.get("${name}");
+        String gender = record.get("${gender}");
+        String birthDate = record.get("${birthDate}");
+        String deathDate = record.get("${deathDate}");
+        String salary = record.get("${salary}");
+        String taxPaid = record.get("${taxPaid}");
+        String browniePoints = record.get("${browniePoints}");
+        String expectedStatus = record.get("${expectedStatus}");
+        String expectedErrMessage = record.get("${expectedErrMessage}");
+        
+        setupWorkingClassHeroesClearDBData(natid);
+        String responseBody = createHeroAPI(natid, name, gender, birthDate, deathDate, salary, taxPaid, browniePoints, expectedStatus);   
+        verifyCreateHeroAPIResponseMessage(responseBody, expectedErrMessage, flow);
+        verifyCreatedHeroAgainstDB(natid, flow);
+    }
+}

@@ -1,0 +1,163 @@
+package keywords;
+
+import java.io.IOException;
+import java.io.OutputStream;
+
+import static org.testng.Assert.assertEquals;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.Map;
+
+import org.apache.hc.client5.http.classic.HttpClient;
+import org.apache.hc.client5.http.classic.methods.HttpPost;
+import org.apache.hc.client5.http.impl.classic.HttpClientBuilder;
+import org.apache.hc.core5.http.HttpResponse;
+import org.apache.hc.core5.http.io.entity.StringEntity;
+import org.apache.hc.client5.http.impl.classic.CloseableHttpClient;
+import org.apache.hc.client5.http.impl.classic.CloseableHttpResponse;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import dev.failsafe.internal.util.Assert;
+import objectRepository.APIObject;
+
+public class APIHelper {
+
+	public static String convertDictToJsonString(Map<String, String> dictPayload) {
+		// Convert the Map to JSON
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            String jsonString = objectMapper.writeValueAsString(dictPayload);
+            jsonString = jsonString.replaceAll("\"null\"", "null");
+            System.out.println("JSON Output: " + jsonString);
+            return jsonString;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return e.toString();
+        }
+	}
+
+    public static String postAPI(String endpoint, String jsonPayload, String expectedStatus) {
+    	
+    	
+    	try (CloseableHttpClient httpClient = HttpClientBuilder.create().build()) {
+            // Create HttpPost request
+            HttpPost request = new HttpPost(endpoint);
+            StringEntity params = new StringEntity(jsonPayload);
+            request.addHeader("Content-Type", "application/json");
+            request.setEntity(params);
+
+            // Execute the request
+            try (CloseableHttpResponse response = httpClient.execute(request)) {
+                // Check if there is a response entity
+                if (response.getEntity() != null) {
+                    // Read the response body
+                    BufferedReader reader = new BufferedReader(
+                            new InputStreamReader(response.getEntity().getContent()));
+                    StringBuilder responseBody = new StringBuilder();
+                    String line;
+                    while ((line = reader.readLine()) != null) {
+                        responseBody.append(line);
+                    }
+	          	    System.out.println("Expected Response Status Code: " + expectedStatus);
+	          	    System.out.println("Actual Response Status Code: " + response.getCode());
+                    String responseBodyString = responseBody.toString();
+                    System.out.println("Response Body: " + responseBodyString);
+                	assertEquals(String.valueOf(response.getCode()), expectedStatus);
+                	return responseBodyString;
+                } else {
+                	String message_string = "No response body received.";
+                    System.out.println(message_string);
+                    return message_string;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+    		return e.toString();
+        }
+    	
+    	
+//    	// @Deprecated HttpClient httpClient = new DefaultHttpClient();
+//    	HttpClient httpClient = HttpClientBuilder.create().build();
+//    	try {
+//    	    HttpPost request = new HttpPost(endpoint);
+//    	    StringEntity params = new StringEntity(jsonPayload);
+//    	    request.addHeader("content-type", "application/json");
+//    	    request.setEntity(params);
+//    	    HttpResponse response = httpClient.execute(request);
+//    	    String responseBody = EntityUtils.toString(response.getEntity());
+//            System.out.println("Response Body: " + responseBody);
+//    	    System.out.println("Response: " + response);
+//    	    System.out.println("Response getCode: " + response.getCode());
+//    	    System.out.println("Response getReasonPhrase: " + response);
+//    	} catch (Exception ex) {
+//    	}
+    	
+    	
+//    	try {
+//            // URL to send the POST request to
+//            URL url = new URL(endpoint);
+//            System.out.println("API URL: " + url);
+//            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+//
+//            // Set up the connection
+//            connection.setRequestMethod("POST");
+//            connection.setRequestProperty("Content-Type", "application/json; utf-8");
+//            connection.setRequestProperty("Accept", "application/json");
+//            connection.setDoOutput(true);
+//
+//            // JSON payload to send
+//            String jsonInputString = "{\"name\": \"John Doe\", \"age\": 30}";
+//
+//            // Write the request payload to the connection
+//            try (OutputStream os = connection.getOutputStream()) {
+//                byte[] input = jsonInputString.getBytes("utf-8");
+//                os.write(input, 0, input.length);
+//            }
+//
+//            // Print the response code
+//            int responseCode = connection.getResponseCode();
+//            System.out.println("Response Code: " + responseCode);
+//
+//            // Close the connection
+//            connection.disconnect();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+    	
+    	
+    	
+//        // Create an HTTP client
+//        try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
+//            // Create a POST request
+//            HttpPost httpPost = new HttpPost(url);
+//            httpPost.setEntity(new StringEntity(dictPayload.toString()));
+//            httpPost.setHeader("Content-Type", "application/json");
+//            
+//            // Execute the request and get the response
+//            try (CloseableHttpResponse response = httpClient.execute(httpPost)) {
+//                // Convert the response to a string
+//                String responseString = EntityUtils.toString(response.getEntity());
+//                
+//                // Log the response (optional)
+//                System.out.println("\nRequest: \n" + dictPayload.toString() + "\nResponse: " + responseString + "\n\n");
+//                
+//                // Assert the response status code (you can change this as needed)
+////                int statusCode = response.getStatusLine().getStatusCode();
+////                Assert.assertTrue(statusCode >= 200 && statusCode < 300, "Unexpected status code: " + statusCode);
+//                
+//                // You can add additional assertions based on the response content
+//                // Example: Assert.assertTrue(responseString.contains("expectedValue"), "Response did not contain expected value");
+//            } catch (ParseException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+//        } catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+    }
+}

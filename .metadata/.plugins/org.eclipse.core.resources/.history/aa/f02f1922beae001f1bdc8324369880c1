@@ -1,0 +1,21 @@
+package testCases;
+
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import keywords.GenericKeywords;
+import keywords.Voucher;
+
+public class US6GetVoucherByPersonTypeAPI extends Voucher{
+
+	@BeforeTest
+	public void testSetUp() {
+		GenericKeywords.clearTestOutput(GenericKeywords.test_output_path);
+	}
+	
+	@Test(description = "Test Case 1 - Get And Verify Json Schema of Voucher By Person And Type API - Positive")
+	public void testCase1() {
+		getVoucherByPersonAndTypeAPI("200");
+		GenericKeywords.js
+	}
+}

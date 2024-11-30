@@ -1,0 +1,95 @@
+package keywords;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Map;
+import java.util.Set;
+
+public class SQLHelper {
+
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/testdb";
+    private static final String DB_USER = "user";
+    private static final String DB_PASSWORD = "userpassword";
+
+    public static void main(String[] args) {
+        // Example usage
+        try {
+            Map<String, String> argsDict = Map.of("param1", "value1", "param2", "value2");
+            String result = queryDatabase("sample-query-file", argsDict);
+            System.out.println("Query Result: " + result);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public static String queryDatabases(String sqlFileName, Map<String, String> argsDict){
+
+    	return SQLHelper.queryDatabases(sqlFileName, null);
+    }
+    
+    public static String queryDatabase(String sqlFileName, Map<String, String> argsDict) throws SQLException, IOException {
+        Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+        String updatedSqlQuery = updateSqlQueriesWithArgumentsDictionary(sqlFileName, argsDict);
+
+        // Check if the SQL query contains 'DELETE' to determine execution path
+        if (updatedSqlQuery.toUpperCase().contains("DELETE")) {
+            executeSqlString(connection, updatedSqlQuery);
+        } else {
+            return query(connection, updatedSqlQuery);
+        }
+        connection.close();
+        return "Query executed successfully";
+    }
+
+    private static String updateSqlQueriesWithArgumentsDictionary(String sqlFileName, Map<String, String> argsDict) throws IOException {
+    	Path projectPath = Paths.get("").toAbsolutePath();
+        String sqlQuery = readFile(projectPath + "/src/test/java/objectRepository/sql-queries/" + sqlFileName + ".sql");
+
+        // Replace placeholders in the SQL query with values from argsDict
+        if (argsDict != null && !argsDict.isEmpty()) {
+            Set<Map.Entry<String, String>> entrySet = argsDict.entrySet();
+            for (Map.Entry<String, String> entry : entrySet) {
+                String key = entry.getKey();
+                String value = entry.getValue();
+                sqlQuery = sqlQuery.replace("{{" + key + "}}", value);
+            }
+        }
+        return sqlQuery;
+    }
+
+    private static String readFile(String filePath) throws IOException {
+        StringBuilder content = new StringBuilder();
+        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                content.append(line).append("\n");
+            }
+        }
+        return content.toString();
+    }
+
+    private static void executeSqlString(Connection connection, String sqlQuery) throws SQLException {
+        try (PreparedStatement statement = connection.prepareStatement(sqlQuery)) {
+            statement.executeUpdate();
+        }
+    }
+
+    private static String query(Connection connection, String sqlQuery) throws SQLException {
+        StringBuilder result = new StringBuilder();
+        try (PreparedStatement statement = connection.prepareStatement(sqlQuery);
+             ResultSet resultSet = statement.executeQuery()) {
+            while (resultSet.next()) {
+                // Assuming the result has columns you want to read; adjust as needed
+                result.append(resultSet.getString(1)).append("\t");
+            }
+        }
+        return result.toString();
+    }
+}

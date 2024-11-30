@@ -1,0 +1,1277 @@
+<html>
+<head>
+<title>TestNG:  Regression Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Regression Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>40/14/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sat Nov 30 11:50:15 GMT+08:00 2024</td>
+</tr>
+<tr><td>Total time:</td><td>10 seconds (10344 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testCases.US2CreateHeroClerkDashboard.US2testCase8()'><b>US2testCase8</b><br>Test class: testCases.US2CreateHeroClerkDashboard<br>Test method: Test Case 8 - Partial Data Wrong Format - Negative - tax_paid</td>
+<td><div><pre>java.lang.AssertionError: Negative Record With Invalid Column Named &quot;tax_paid&quot; Should Not Be Created In DB
+	at keywords.Clerk.verifyPartialUploadedDataInDB(Clerk.java:165)
+	at testCases.US2CreateHeroClerkDashboard.US2testCase8(US2CreateHeroClerkDashboard.java:82)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1741684397", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1741684397'><pre>java.lang.AssertionError: Negative Record With Invalid Column Named &quot;tax_paid&quot; Should Not Be Created In DB
+	at keywords.Clerk.verifyPartialUploadedDataInDB(Clerk.java:165)
+	at testCases.US2CreateHeroClerkDashboard.US2testCase8(US2CreateHeroClerkDashboard.java:82)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>testCases.US2CreateHeroClerkDashboard@399c4be1</td></tr>
+<tr>
+<td title='testCases.US2CreateHeroClerkDashboard.US2testCase9()'><b>US2testCase9</b><br>Test class: testCases.US2CreateHeroClerkDashboard<br>Test method: Test Case 9 - Partial Data Wrong Format - Positive - positive records before negative will still be created</td>
+<td><div><pre>java.lang.AssertionError: Positive Record Not Created In DB
+	at keywords.Clerk.verifyPartialUploadedDataInDB(Clerk.java:159)
+	at testCases.US2CreateHeroClerkDashboard.US2testCase9(US2CreateHeroClerkDashboard.java:88)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2102562039", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2102562039'><pre>java.lang.AssertionError: Positive Record Not Created In DB
+	at keywords.Clerk.verifyPartialUploadedDataInDB(Clerk.java:159)
+	at testCases.US2CreateHeroClerkDashboard.US2testCase9(US2CreateHeroClerkDashboard.java:88)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>testCases.US2CreateHeroClerkDashboard@399c4be1</td></tr>
+<tr>
+<td title='testCases.US2CreateHeroClerkDashboard.US2testCase6()'><b>US2testCase6</b><br>Test class: testCases.US2CreateHeroClerkDashboard<br>Test method: Test Case 6 - Partial Data Wrong Format - Negative - birth_date</td>
+<td><div><pre>java.lang.AssertionError: Negative Record With Invalid Column Named &quot;birth_date&quot; Should Not Be Created In DB
+	at keywords.Clerk.verifyPartialUploadedDataInDB(Clerk.java:165)
+	at testCases.US2CreateHeroClerkDashboard.US2testCase6(US2CreateHeroClerkDashboard.java:70)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1353756631", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1353756631'><pre>java.lang.AssertionError: Negative Record With Invalid Column Named &quot;birth_date&quot; Should Not Be Created In DB
+	at keywords.Clerk.verifyPartialUploadedDataInDB(Clerk.java:165)
+	at testCases.US2CreateHeroClerkDashboard.US2testCase6(US2CreateHeroClerkDashboard.java:70)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>testCases.US2CreateHeroClerkDashboard@399c4be1</td></tr>
+<tr>
+<td title='testCases.US4CreateHeroWithVoucherAPI.US4testWithCsvData()'><b>US4testWithCsvData</b><br>Test class: testCases.US4CreateHeroWithVoucherAPI<br>Parameters: Test Case 9 - Negative - Natid - Number Above 9999999, CSVRecord [comment='null', recordNumber=9, values=[Test Case 9 - Negative - Natid - Number Above 9999999, Negative, natid-9999999990, Beatrice, FEMALE, 1996-02-01T23:59:59, null, 1001.00, 11.00, null, VOUCHER 9, TRAVEL, 400, Invalid natid]]</td>
+<td><div><pre>java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at keywords.APIHelper.postAPI(APIHelper.java:106)
+	at keywords.WorkingClassHeroes.createHeroWithVoucherAPI(WorkingClassHeroes.java:68)
+	at testCases.US4CreateHeroWithVoucherAPI.US4testWithCsvData(US4CreateHeroWithVoucherAPI.java:64)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2135089262", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2135089262'><pre>java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at keywords.APIHelper.postAPI(APIHelper.java:106)
+	at keywords.WorkingClassHeroes.createHeroWithVoucherAPI(WorkingClassHeroes.java:68)
+	at testCases.US4CreateHeroWithVoucherAPI.US4testWithCsvData(US4CreateHeroWithVoucherAPI.java:64)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>testCases.US4CreateHeroWithVoucherAPI@385e9564</td></tr>
+<tr>
+<td title='testCases.US1CreateHeroAPI.US1testWithCsvData()'><b>US1testWithCsvData</b><br>Test class: testCases.US1CreateHeroAPI<br>Parameters: Test Case 21 - Negative - Tax Paid - Negative Number, CSVRecord [comment='null', recordNumber=21, values=[Test Case 21 - Negative - Tax Paid - Negative Number, Negative, natid-31, John Cena, MALE, 1996-01-01T23:59:59, null, 1000.00, -10.00, null, 400, Tax paid must be greater than or equals to zero]]</td>
+<td><div><pre>java.lang.AssertionError: expected [Tax paid must be greater than or equals to zero] but found [must be greater than or equal to 0]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at keywords.WorkingClassHeroes.verifyCreateHeroAPIResponseMessage(WorkingClassHeroes.java:83)
+	at testCases.US1CreateHeroAPI.US1testWithCsvData(US1CreateHeroAPI.java:64)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace615014502", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace615014502'><pre>java.lang.AssertionError: expected [Tax paid must be greater than or equals to zero] but found [must be greater than or equal to 0]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at keywords.WorkingClassHeroes.verifyCreateHeroAPIResponseMessage(WorkingClassHeroes.java:83)
+	at testCases.US1CreateHeroAPI.US1testWithCsvData(US1CreateHeroAPI.java:64)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>testCases.US1CreateHeroAPI@7530ad9c</td></tr>
+<tr>
+<td title='testCases.US2CreateHeroClerkDashboard.US2testCase4()'><b>US2testCase4</b><br>Test class: testCases.US2CreateHeroClerkDashboard<br>Test method: Test Case 4 - Partial Data Wrong Format - Negative - name</td>
+<td><div><pre>java.lang.AssertionError: Negative Record With Invalid Column Named &quot;name&quot; Should Not Be Created In DB
+	at keywords.Clerk.verifyPartialUploadedDataInDB(Clerk.java:165)
+	at testCases.US2CreateHeroClerkDashboard.US2testCase4(US2CreateHeroClerkDashboard.java:58)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace485701373", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace485701373'><pre>java.lang.AssertionError: Negative Record With Invalid Column Named &quot;name&quot; Should Not Be Created In DB
+	at keywords.Clerk.verifyPartialUploadedDataInDB(Clerk.java:165)
+	at testCases.US2CreateHeroClerkDashboard.US2testCase4(US2CreateHeroClerkDashboard.java:58)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>testCases.US2CreateHeroClerkDashboard@399c4be1</td></tr>
+<tr>
+<td title='testCases.US1CreateHeroAPI.US1testWithCsvData()'><b>US1testWithCsvData</b><br>Test class: testCases.US1CreateHeroAPI<br>Parameters: Test Case 17 - Negative - Death Date - Wrong Format, CSVRecord [comment='null', recordNumber=17, values=[Test Case 17 - Negative - Death Date - Wrong Format, Negative, natid-27, John Cena, MALE, 1996-01-01T23:59:59, 2020-21-01T23:59:59, 1000.00, 10.00, null, 400, Invalid deathdate format]]</td>
+<td><div><pre>java.lang.AssertionError: expected [400] but found [500]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at keywords.APIHelper.postAPI(APIHelper.java:106)
+	at keywords.WorkingClassHeroes.createHeroAPI(WorkingClassHeroes.java:45)
+	at testCases.US1CreateHeroAPI.US1testWithCsvData(US1CreateHeroAPI.java:63)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1141264726", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1141264726'><pre>java.lang.AssertionError: expected [400] but found [500]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at keywords.APIHelper.postAPI(APIHelper.java:106)
+	at keywords.WorkingClassHeroes.createHeroAPI(WorkingClassHeroes.java:45)
+	at testCases.US1CreateHeroAPI.US1testWithCsvData(US1CreateHeroAPI.java:63)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>testCases.US1CreateHeroAPI@7530ad9c</td></tr>
+<tr>
+<td title='testCases.US2CreateHeroClerkDashboard.US2testCase11()'><b>US2testCase11</b><br>Test class: testCases.US2CreateHeroClerkDashboard<br>Test method: Test Case 11 - Partial Data Wrong Format - Positive - positive records after negative will still be created</td>
+<td><div><pre>java.lang.AssertionError: Positive Record Not Created In DB
+	at keywords.Clerk.verifyPartialUploadedDataInDB(Clerk.java:159)
+	at testCases.US2CreateHeroClerkDashboard.US2testCase11(US2CreateHeroClerkDashboard.java:100)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1239728853", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1239728853'><pre>java.lang.AssertionError: Positive Record Not Created In DB
+	at keywords.Clerk.verifyPartialUploadedDataInDB(Clerk.java:159)
+	at testCases.US2CreateHeroClerkDashboard.US2testCase11(US2CreateHeroClerkDashboard.java:100)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>testCases.US2CreateHeroClerkDashboard@399c4be1</td></tr>
+<tr>
+<td title='testCases.US2CreateHeroClerkDashboard.US2testCase7()'><b>US2testCase7</b><br>Test class: testCases.US2CreateHeroClerkDashboard<br>Test method: Test Case 7 - Partial Data Wrong Format - Negative - salary</td>
+<td><div><pre>java.lang.AssertionError: Negative Record With Invalid Column Named &quot;salary&quot; Should Not Be Created In DB
+	at keywords.Clerk.verifyPartialUploadedDataInDB(Clerk.java:165)
+	at testCases.US2CreateHeroClerkDashboard.US2testCase7(US2CreateHeroClerkDashboard.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1893169190", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1893169190'><pre>java.lang.AssertionError: Negative Record With Invalid Column Named &quot;salary&quot; Should Not Be Created In DB
+	at keywords.Clerk.verifyPartialUploadedDataInDB(Clerk.java:165)
+	at testCases.US2CreateHeroClerkDashboard.US2testCase7(US2CreateHeroClerkDashboard.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>testCases.US2CreateHeroClerkDashboard@399c4be1</td></tr>
+<tr>
+<td title='testCases.US3TaxReliefGenerationBKDashboard.US3testCase1()'><b>US3testCase1</b><br>Test class: testCases.US3TaxReliefGenerationBKDashboard</td>
+<td><div><pre>java.lang.AssertionError: file_status: NEW is not equal to COMPLETED! expected [NEW] but found [COMPLETED]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at keywords.BookKeeper.verifyDBFileTable(BookKeeper.java:124)
+	at testCases.US3TaxReliefGenerationBKDashboard.US3testCase1(US3TaxReliefGenerationBKDashboard.java:31)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1974379194", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1974379194'><pre>java.lang.AssertionError: file_status: NEW is not equal to COMPLETED! expected [NEW] but found [COMPLETED]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at keywords.BookKeeper.verifyDBFileTable(BookKeeper.java:124)
+	at testCases.US3TaxReliefGenerationBKDashboard.US3testCase1(US3TaxReliefGenerationBKDashboard.java:31)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>1</td>
+<td>testCases.US3TaxReliefGenerationBKDashboard@291caca8</td></tr>
+<tr>
+<td title='testCases.US4CreateHeroWithVoucherAPI.US4testWithCsvData()'><b>US4testWithCsvData</b><br>Test class: testCases.US4CreateHeroWithVoucherAPI<br>Parameters: Test Case 12 - Negative - Name - More than 100 characters, CSVRecord [comment='null', recordNumber=12, values=[Test Case 12 - Negative - Name - More than 100 characters, Negative, natid-63, Jennifer Lopez Jennifer Lopez Jennifer Lopez Jennifer Lopez Jennifer Lopez Jennifer Lopez Jennifer Lopez, FEMALE, 1996-02-01T23:59:59, null, 1001.00, 11.00, null, VOUCHER 12, FOOD, 400, Name must be between 1 and 100 characters]]</td>
+<td><div><pre>java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at keywords.APIHelper.postAPI(APIHelper.java:106)
+	at keywords.WorkingClassHeroes.createHeroWithVoucherAPI(WorkingClassHeroes.java:68)
+	at testCases.US4CreateHeroWithVoucherAPI.US4testWithCsvData(US4CreateHeroWithVoucherAPI.java:64)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace263103706", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace263103706'><pre>java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at keywords.APIHelper.postAPI(APIHelper.java:106)
+	at keywords.WorkingClassHeroes.createHeroWithVoucherAPI(WorkingClassHeroes.java:68)
+	at testCases.US4CreateHeroWithVoucherAPI.US4testWithCsvData(US4CreateHeroWithVoucherAPI.java:64)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>testCases.US4CreateHeroWithVoucherAPI@385e9564</td></tr>
+<tr>
+<td title='testCases.US1CreateHeroAPI.US1testWithCsvData()'><b>US1testWithCsvData</b><br>Test class: testCases.US1CreateHeroAPI<br>Parameters: Test Case 6 - Positive - Death Date Not Null, CSVRecord [comment='null', recordNumber=6, values=[Test Case 6 - Positive - Death Date Not Null, Positive, natid-16, Sasha Tan, FEMALE, 1996-01-01T23:59:59, 2020-01-01T23:59:59, 1000.00, 10.00, null, 200, ]]</td>
+<td><div><pre>java.lang.AssertionError: expected [200] but found [500]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at keywords.APIHelper.postAPI(APIHelper.java:106)
+	at keywords.WorkingClassHeroes.createHeroAPI(WorkingClassHeroes.java:45)
+	at testCases.US1CreateHeroAPI.US1testWithCsvData(US1CreateHeroAPI.java:63)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1663431506", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1663431506'><pre>java.lang.AssertionError: expected [200] but found [500]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at keywords.APIHelper.postAPI(APIHelper.java:106)
+	at keywords.WorkingClassHeroes.createHeroAPI(WorkingClassHeroes.java:45)
+	at testCases.US1CreateHeroAPI.US1testWithCsvData(US1CreateHeroAPI.java:63)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>testCases.US1CreateHeroAPI@7530ad9c</td></tr>
+<tr>
+<td title='testCases.US2CreateHeroClerkDashboard.US2testCase5()'><b>US2testCase5</b><br>Test class: testCases.US2CreateHeroClerkDashboard<br>Test method: Test Case 5 - Partial Data Wrong Format - Negative - gender - Missing</td>
+<td><div><pre>java.lang.AssertionError: Negative Record With Invalid Column Named &quot;gender&quot; Should Not Be Created In DB
+	at keywords.Clerk.verifyPartialUploadedDataInDB(Clerk.java:165)
+	at testCases.US2CreateHeroClerkDashboard.US2testCase5(US2CreateHeroClerkDashboard.java:64)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace826945968", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace826945968'><pre>java.lang.AssertionError: Negative Record With Invalid Column Named &quot;gender&quot; Should Not Be Created In DB
+	at keywords.Clerk.verifyPartialUploadedDataInDB(Clerk.java:165)
+	at testCases.US2CreateHeroClerkDashboard.US2testCase5(US2CreateHeroClerkDashboard.java:64)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>testCases.US2CreateHeroClerkDashboard@399c4be1</td></tr>
+<tr>
+<td title='testCases.US5GetHeroOweMoneyAPI.US5testCase1()'><b>US5testCase1</b><br>Test class: testCases.US5GetHeroOweMoneyAPI<br>Test method: Test Case 1 - Get Hero Owe Money API - Positive</td>
+<td><div><pre>java.lang.AssertionError: expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at keywords.APIHelper.getAPI(APIHelper.java:67)
+	at keywords.WorkingClassHeroes.getHeroOweMoneyAPI(WorkingClassHeroes.java:118)
+	at testCases.US5GetHeroOweMoneyAPI.US5testCase1(US5GetHeroOweMoneyAPI.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace64614565", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace64614565'><pre>java.lang.AssertionError: expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at keywords.APIHelper.getAPI(APIHelper.java:67)
+	at keywords.WorkingClassHeroes.getHeroOweMoneyAPI(WorkingClassHeroes.java:118)
+	at testCases.US5GetHeroOweMoneyAPI.US5testCase1(US5GetHeroOweMoneyAPI.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>testCases.US5GetHeroOweMoneyAPI@5b94b04d</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testCases.US1CreateHeroAPI.US1testWithCsvData()'><b>US1testWithCsvData</b><br>Test class: testCases.US1CreateHeroAPI<br>Parameters: Test Case 9 - Negative - Natid - Wrong Format, CSVRecord [comment='null', recordNumber=9, values=[Test Case 9 - Negative - Natid - Wrong Format, Negative, natid-1a, Jennifer Lopez, FEMALE, 1996-02-01T23:59:59, null, 1001.00, 11.00, null, 400, Invalid natid]]</td>
+<td></td>
+<td>0</td>
+<td>testCases.US1CreateHeroAPI@7530ad9c</td></tr>
+<tr>
+<td title='testCases.US4CreateHeroWithVoucherAPI.US4testWithCsvData()'><b>US4testWithCsvData</b><br>Test class: testCases.US4CreateHeroWithVoucherAPI<br>Parameters: Test Case 18 - Negative - Tax Paid - String, CSVRecord [comment='null', recordNumber=18, values=[Test Case 18 - Negative - Tax Paid - String, Negative, natid-69, John Cena, MALE, 1996-01-01T23:59:59, null, 1000.00, ten, null, VOUCHER 18, TRAVEL, 400, ]]</td>
+<td></td>
+<td>0</td>
+<td>testCases.US4CreateHeroWithVoucherAPI@385e9564</td></tr>
+<tr>
+<td title='testCases.US4CreateHeroWithVoucherAPI.US4testWithCsvData()'><b>US4testWithCsvData</b><br>Test class: testCases.US4CreateHeroWithVoucherAPI<br>Parameters: Test Case 8 - Negative - Natid - Wrong Format, CSVRecord [comment='null', recordNumber=8, values=[Test Case 8 - Negative - Natid - Wrong Format, Negative, natid-5a, Yue Yue, FEMALE, 1996-02-01T23:59:59, null, 1001.00, 11.00, null, VOUCHER 8, SPORT, 400, ]]</td>
+<td></td>
+<td>0</td>
+<td>testCases.US4CreateHeroWithVoucherAPI@385e9564</td></tr>
+<tr>
+<td title='testCases.US4CreateHeroWithVoucherAPI.US4testWithCsvData()'><b>US4testWithCsvData</b><br>Test class: testCases.US4CreateHeroWithVoucherAPI<br>Parameters: Test Case 7 - Positive - Brownie Points Not Null, CSVRecord [comment='null', recordNumber=7, values=[Test Case 7 - Positive - Brownie Points Not Null, Positive, natid-56, DeDe, FEMALE, 1996-01-01T23:59:59, null, 1000.00, 10.00, 5, VOUCHER 7, TRAVEL, 200, ]]</td>
+<td></td>
+<td>0</td>
+<td>testCases.US4CreateHeroWithVoucherAPI@385e9564</td></tr>
+<tr>
+<td title='testCases.US1CreateHeroAPI.US1testWithCsvData()'><b>US1testWithCsvData</b><br>Test class: testCases.US1CreateHeroAPI<br>Parameters: Test Case 13 - Negative - Name - More than 100 characters, CSVRecord [comment='null', recordNumber=13, values=[Test Case 13 - Negative - Name - More than 100 characters, Negative, natid-23, Jennifer Lopez Jennifer Lopez Jennifer Lopez Jennifer Lopez Jennifer Lopez Jennifer Lopez Jennifer Lopez, FEMALE, 1996-02-01T23:59:59, null, 1001.00, 11.00, null, 400, Name must be between 1 and 100 characters]]</td>
+<td></td>
+<td>0</td>
+<td>testCases.US1CreateHeroAPI@7530ad9c</td></tr>
+<tr>
+<td title='testCases.US5GetHeroOweMoneyAPI.US5testCase2()'><b>US5testCase2</b><br>Test class: testCases.US5GetHeroOweMoneyAPI<br>Test method: Test Case 2 - Get Hero Owe Money API - Negative</td>
+<td></td>
+<td>0</td>
+<td>testCases.US5GetHeroOweMoneyAPI@5b94b04d</td></tr>
+<tr>
+<td title='testCases.US4CreateHeroWithVoucherAPI.US4testWithCsvData()'><b>US4testWithCsvData</b><br>Test class: testCases.US4CreateHeroWithVoucherAPI<br>Parameters: Test Case 2 - Positive - Name, CSVRecord [comment='null', recordNumber=2, values=[Test Case 2 - Positive - Name, Positive, natid-52, Shawn, MALE, 1996-01-01T23:59:59, null, 1000.00, 10.00, null, VOUCHER 2, FOOD, 200, ]]</td>
+<td></td>
+<td>0</td>
+<td>testCases.US4CreateHeroWithVoucherAPI@385e9564</td></tr>
+<tr>
+<td title='testCases.US4CreateHeroWithVoucherAPI.US4testWithCsvData()'><b>US4testWithCsvData</b><br>Test class: testCases.US4CreateHeroWithVoucherAPI<br>Parameters: Test Case 16 - Negative - Salary - String, CSVRecord [comment='null', recordNumber=16, values=[Test Case 16 - Negative - Salary - String, Negative, natid-67, John Cena, MALE, 1996-01-01T23:59:59, null, One Thousand, 10.00, null, VOUCHER 16, SPORT, 400, ]]</td>
+<td></td>
+<td>0</td>
+<td>testCases.US4CreateHeroWithVoucherAPI@385e9564</td></tr>
+<tr>
+<td title='testCases.US2CreateHeroClerkDashboard.US2testCase1()'><b>US2testCase1</b><br>Test class: testCases.US2CreateHeroClerkDashboard<br>Test method: Test Case 1 - Clerk Dashboard Create Heroes Upload CSV File - Positive</td>
+<td></td>
+<td>1</td>
+<td>testCases.US2CreateHeroClerkDashboard@399c4be1</td></tr>
+<tr>
+<td title='testCases.US4CreateHeroWithVoucherAPI.US4testWithCsvData()'><b>US4testWithCsvData</b><br>Test class: testCases.US4CreateHeroWithVoucherAPI<br>Parameters: Test Case 11 - Negative - Name - Number, CSVRecord [comment='null', recordNumber=11, values=[Test Case 11 - Negative - Name - Number, Negative, natid-62, Jennifer9Lopez, FEMALE, 1996-02-01T23:59:59, null, 1001.00, 11.00, null, VOUCHER 11, FOOD, 400, Invalid name]]</td>
+<td></td>
+<td>0</td>
+<td>testCases.US4CreateHeroWithVoucherAPI@385e9564</td></tr>
+<tr>
+<td title='testCases.US4CreateHeroWithVoucherAPI.US4testWithCsvData()'><b>US4testWithCsvData</b><br>Test class: testCases.US4CreateHeroWithVoucherAPI<br>Parameters: Test Case 14 - Negative - Birth Date - Wrong Format, CSVRecord [comment='null', recordNumber=14, values=[Test Case 14 - Negative - Birth Date - Wrong Format, Negative, natid-65, John Cena, MALE, 1996-01-01 23:59:59, null, 1000.00, 10.00, null, VOUCHER 14, SPORT, 400, ]]</td>
+<td></td>
+<td>0</td>
+<td>testCases.US4CreateHeroWithVoucherAPI@385e9564</td></tr>
+<tr>
+<td title='testCases.US1CreateHeroAPI.US1testWithCsvData()'><b>US1testWithCsvData</b><br>Test class: testCases.US1CreateHeroAPI<br>Parameters: Test Case 14 - Negative - Gender - Invalid Capitalisation, CSVRecord [comment='null', recordNumber=14, values=[Test Case 14 - Negative - Gender - Invalid Capitalisation, Negative, natid-24, John Cena, male, 1996-01-01T23:59:59, null, 1000.00, 10.00, null, 400, Invalid gender]]</td>
+<td></td>
+<td>0</td>
+<td>testCases.US1CreateHeroAPI@7530ad9c</td></tr>
+<tr>
+<td title='testCases.US1CreateHeroAPI.US1testWithCsvData()'><b>US1testWithCsvData</b><br>Test class: testCases.US1CreateHeroAPI<br>Parameters: Test Case 16 - Negative - Birth Date - Future Date, CSVRecord [comment='null', recordNumber=16, values=[Test Case 16 - Negative - Birth Date - Future Date, Negative, natid-26, John Cena, MALE, 3000-01-01T23:59:59, null, 1000.00, 10.00, null, 400, There are some issues with working class hero]]</td>
+<td></td>
+<td>0</td>
+<td>testCases.US1CreateHeroAPI@7530ad9c</td></tr>
+<tr>
+<td title='testCases.US1CreateHeroAPI.US1testWithCsvData()'><b>US1testWithCsvData</b><br>Test class: testCases.US1CreateHeroAPI<br>Parameters: Test Case 1 - Positive - Natid - Birth Date - Salary - Tax Paid, CSVRecord [comment='null', recordNumber=1, values=[Test Case 1 - Positive - Natid - Birth Date - Salary - Tax Paid, Positive, natid-11, John Bosh, MALE, 1996-01-01T23:59:59, null, 1000.12, 10.00, null, 200, ]]</td>
+<td></td>
+<td>0</td>
+<td>testCases.US1CreateHeroAPI@7530ad9c</td></tr>
+<tr>
+<td title='testCases.US1CreateHeroAPI.US1testWithCsvData()'><b>US1testWithCsvData</b><br>Test class: testCases.US1CreateHeroAPI<br>Parameters: Test Case 10 - Negative - Natid - Number Above 9999999, CSVRecord [comment='null', recordNumber=10, values=[Test Case 10 - Negative - Natid - Number Above 9999999, Negative, natid-99999990, Jennifer Lopez, FEMALE, 1996-02-01T23:59:59, null, 1001.00, 11.00, null, 400, Invalid natid]]</td>
+<td></td>
+<td>0</td>
+<td>testCases.US1CreateHeroAPI@7530ad9c</td></tr>
+<tr>
+<td title='testCases.US1CreateHeroAPI.US1testWithCsvData()'><b>US1testWithCsvData</b><br>Test class: testCases.US1CreateHeroAPI<br>Parameters: Test Case 18 - Negative - Salary - String, CSVRecord [comment='null', recordNumber=18, values=[Test Case 18 - Negative - Salary - String, Negative, natid-28, John Cena, MALE, 1996-01-01T23:59:59, null, One Thousand, 10.00, null, 400, ]]</td>
+<td></td>
+<td>0</td>
+<td>testCases.US1CreateHeroAPI@7530ad9c</td></tr>
+<tr>
+<td title='testCases.US1CreateHeroAPI.US1testWithCsvData()'><b>US1testWithCsvData</b><br>Test class: testCases.US1CreateHeroAPI<br>Parameters: Test Case 19 - Negative - Salary - Negative Number, CSVRecord [comment='null', recordNumber=19, values=[Test Case 19 - Negative - Salary - Negative Number, Negative, natid-29, John Cena, MALE, 1996-01-01T23:59:59, null, -1000.00, 10.00, null, 400, Salary must be greater than or equals to zero]]</td>
+<td></td>
+<td>0</td>
+<td>testCases.US1CreateHeroAPI@7530ad9c</td></tr>
+<tr>
+<td title='testCases.US4CreateHeroWithVoucherAPI.US4testWithCsvData()'><b>US4testWithCsvData</b><br>Test class: testCases.US4CreateHeroWithVoucherAPI<br>Parameters: Test Case 5 - Positive - Death Date Null, CSVRecord [comment='null', recordNumber=5, values=[Test Case 5 - Positive - Death Date Null, Positive, natid-55, Yenn Yee, FEMALE, 1996-01-01T23:59:59, null, 1000.00, 10.00, null, VOUCHER 5, FOOD, 200, ]]</td>
+<td></td>
+<td>0</td>
+<td>testCases.US4CreateHeroWithVoucherAPI@385e9564</td></tr>
+<tr>
+<td title='testCases.US4CreateHeroWithVoucherAPI.US4testWithCsvData()'><b>US4testWithCsvData</b><br>Test class: testCases.US4CreateHeroWithVoucherAPI<br>Parameters: Test Case 17 - Negative - Salary - Negative Number, CSVRecord [comment='null', recordNumber=17, values=[Test Case 17 - Negative - Salary - Negative Number, Negative, natid-68, John Cena, MALE, 1996-01-01T23:59:59, null, -1000.00, 10.00, null, VOUCHER 17, TRAVEL, 400, Salary must be greater than or equals to zero]]</td>
+<td></td>
+<td>0</td>
+<td>testCases.US4CreateHeroWithVoucherAPI@385e9564</td></tr>
+<tr>
+<td title='testCases.US1CreateHeroAPI.US1testWithCsvData()'><b>US1testWithCsvData</b><br>Test class: testCases.US1CreateHeroAPI<br>Parameters: Test Case 3 - Positive - Gender MALE, CSVRecord [comment='null', recordNumber=3, values=[Test Case 3 - Positive - Gender MALE, Positive, natid-13, Chris John, MALE, 1996-01-01T23:59:59, null, 1000.00, 10.00, null, 200, ]]</td>
+<td></td>
+<td>0</td>
+<td>testCases.US1CreateHeroAPI@7530ad9c</td></tr>
+<tr>
+<td title='testCases.US1CreateHeroAPI.US1testWithCsvData()'><b>US1testWithCsvData</b><br>Test class: testCases.US1CreateHeroAPI<br>Parameters: Test Case 11 - Negative - Name - Special Character, CSVRecord [comment='null', recordNumber=11, values=[Test Case 11 - Negative - Name - Special Character, Negative, natid-21, Jennifer-Lopez, FEMALE, 1996-02-01T23:59:59, null, 1001.00, 11.00, null, 400, Invalid name]]</td>
+<td></td>
+<td>0</td>
+<td>testCases.US1CreateHeroAPI@7530ad9c</td></tr>
+<tr>
+<td title='testCases.US4CreateHeroWithVoucherAPI.US4testWithCsvData()'><b>US4testWithCsvData</b><br>Test class: testCases.US4CreateHeroWithVoucherAPI<br>Parameters: Test Case 1 - Positive - Natid - Birth Date - Salary - Tax Paid, CSVRecord [comment='null', recordNumber=1, values=[Test Case 1 - Positive - Natid - Birth Date - Salary - Tax Paid, Positive, natid-51, John Bosh, MALE, 1996-01-01T23:59:59, null, 1000.12, 10.00, null, VOUCHER 1, TRAVEL, 200, ]]</td>
+<td></td>
+<td>0</td>
+<td>testCases.US4CreateHeroWithVoucherAPI@385e9564</td></tr>
+<tr>
+<td title='testCases.US6GetVoucherByPersonTypeAPI.US6testCase1()'><b>US6testCase1</b><br>Test class: testCases.US6GetVoucherByPersonTypeAPI<br>Test method: Test Case 1 - Get And Verify Json Schema of Voucher By Person And Type API - Positive</td>
+<td></td>
+<td>0</td>
+<td>testCases.US6GetVoucherByPersonTypeAPI@8c3b9d</td></tr>
+<tr>
+<td title='testCases.US1CreateHeroAPI.US1testWithCsvData()'><b>US1testWithCsvData</b><br>Test class: testCases.US1CreateHeroAPI<br>Parameters: Test Case 4 - Positive - Gender FEMALE, CSVRecord [comment='null', recordNumber=4, values=[Test Case 4 - Positive - Gender FEMALE, Positive, natid-14, Sasha NF, FEMALE, 1996-01-01T23:59:59, null, 1000.00, 10.00, null, 200, ]]</td>
+<td></td>
+<td>0</td>
+<td>testCases.US1CreateHeroAPI@7530ad9c</td></tr>
+<tr>
+<td title='testCases.US4CreateHeroWithVoucherAPI.US4testWithCsvData()'><b>US4testWithCsvData</b><br>Test class: testCases.US4CreateHeroWithVoucherAPI<br>Parameters: Test Case 13 - Negative - Gender - Invalid Capitalisation, CSVRecord [comment='null', recordNumber=13, values=[Test Case 13 - Negative - Gender - Invalid Capitalisation, Negative, natid-64, John Cena, male, 1996-01-01T23:59:59, null, 1000.00, 10.00, null, VOUCHER 13, FOOD, 400, Invalid gender]]</td>
+<td></td>
+<td>0</td>
+<td>testCases.US4CreateHeroWithVoucherAPI@385e9564</td></tr>
+<tr>
+<td title='testCases.US1CreateHeroAPI.US1testWithCsvData()'><b>US1testWithCsvData</b><br>Test class: testCases.US1CreateHeroAPI<br>Parameters: Test Case 12 - Negative - Name - Number, CSVRecord [comment='null', recordNumber=12, values=[Test Case 12 - Negative - Name - Number, Negative, natid-22, Jennifer9Lopez, FEMALE, 1996-02-01T23:59:59, null, 1001.00, 11.00, null, 400, Invalid name]]</td>
+<td></td>
+<td>0</td>
+<td>testCases.US1CreateHeroAPI@7530ad9c</td></tr>
+<tr>
+<td title='testCases.US1CreateHeroAPI.US1testWithCsvData()'><b>US1testWithCsvData</b><br>Test class: testCases.US1CreateHeroAPI<br>Parameters: Test Case 5 - Positive - Death Date Null, CSVRecord [comment='null', recordNumber=5, values=[Test Case 5 - Positive - Death Date Null, Positive, natid-15, Sasha Lee, FEMALE, 1996-01-01T23:59:59, null, 1000.00, 10.00, null, 200, ]]</td>
+<td></td>
+<td>0</td>
+<td>testCases.US1CreateHeroAPI@7530ad9c</td></tr>
+<tr>
+<td title='testCases.US2CreateHeroClerkDashboard.US2testCase10()'><b>US2testCase10</b><br>Test class: testCases.US2CreateHeroClerkDashboard<br>Test method: Test Case 10 - Partial Data Wrong Format - Negative - gender - Wrong Format</td>
+<td></td>
+<td>0</td>
+<td>testCases.US2CreateHeroClerkDashboard@399c4be1</td></tr>
+<tr>
+<td title='testCases.US2CreateHeroClerkDashboard.US2testCase3()'><b>US2testCase3</b><br>Test class: testCases.US2CreateHeroClerkDashboard<br>Test method: Test Case 3 - Partial Data Wrong Format - Positive</td>
+<td></td>
+<td>0</td>
+<td>testCases.US2CreateHeroClerkDashboard@399c4be1</td></tr>
+<tr>
+<td title='testCases.US4CreateHeroWithVoucherAPI.US4testWithCsvData()'><b>US4testWithCsvData</b><br>Test class: testCases.US4CreateHeroWithVoucherAPI<br>Parameters: Test Case 6 - Positive - Brownie Points Null, CSVRecord [comment='null', recordNumber=6, values=[Test Case 6 - Positive - Brownie Points Null, Positive, natid-56, Angel, FEMALE, 1996-01-01T23:59:59, null, 1000.00, 10.00, null, VOUCHER 6, TRAVEL, 200, ]]</td>
+<td></td>
+<td>0</td>
+<td>testCases.US4CreateHeroWithVoucherAPI@385e9564</td></tr>
+<tr>
+<td title='testCases.US2CreateHeroClerkDashboard.US2testCase2()'><b>US2testCase2</b><br>Test class: testCases.US2CreateHeroClerkDashboard<br>Test method: Test Case 2 - Clerk Dashboard Create Heroes Upload CSV File - Negative - Partial Data Wrong Format</td>
+<td></td>
+<td>1</td>
+<td>testCases.US2CreateHeroClerkDashboard@399c4be1</td></tr>
+<tr>
+<td title='testCases.US1CreateHeroAPI.US1testWithCsvData()'><b>US1testWithCsvData</b><br>Test class: testCases.US1CreateHeroAPI<br>Parameters: Test Case 20 - Negative - Tax Paid - String, CSVRecord [comment='null', recordNumber=20, values=[Test Case 20 - Negative - Tax Paid - String, Negative, natid-30, John Cena, MALE, 1996-01-01T23:59:59, null, 1000.00, ten, null, 400, ]]</td>
+<td></td>
+<td>0</td>
+<td>testCases.US1CreateHeroAPI@7530ad9c</td></tr>
+<tr>
+<td title='testCases.US4CreateHeroWithVoucherAPI.US4testWithCsvData()'><b>US4testWithCsvData</b><br>Test class: testCases.US4CreateHeroWithVoucherAPI<br>Parameters: Test Case 15 - Negative - Birth Date - Future Date, CSVRecord [comment='null', recordNumber=15, values=[Test Case 15 - Negative - Birth Date - Future Date, Negative, natid-66, John Cena, MALE, 3000-01-01T23:59:59, null, 1000.00, 10.00, null, VOUCHER 15, TRAVEL, 400, There are some issues with working class hero]]</td>
+<td></td>
+<td>0</td>
+<td>testCases.US4CreateHeroWithVoucherAPI@385e9564</td></tr>
+<tr>
+<td title='testCases.US1CreateHeroAPI.US1testWithCsvData()'><b>US1testWithCsvData</b><br>Test class: testCases.US1CreateHeroAPI<br>Parameters: Test Case 2 - Positive - Name, CSVRecord [comment='null', recordNumber=2, values=[Test Case 2 - Positive - Name, Positive, natid-12, John Cena, MALE, 1996-01-01T23:59:59, null, 1000.00, 10.00, null, 200, ]]</td>
+<td></td>
+<td>0</td>
+<td>testCases.US1CreateHeroAPI@7530ad9c</td></tr>
+<tr>
+<td title='testCases.US4CreateHeroWithVoucherAPI.US4testWithCsvData()'><b>US4testWithCsvData</b><br>Test class: testCases.US4CreateHeroWithVoucherAPI<br>Parameters: Test Case 4 - Positive - Gender FEMALE, CSVRecord [comment='null', recordNumber=4, values=[Test Case 4 - Positive - Gender FEMALE, Positive, natid-54, Grace, FEMALE, 1996-01-01T23:59:59, null, 1000.00, 10.00, null, VOUCHER 4, TRAVEL, 200, ]]</td>
+<td></td>
+<td>0</td>
+<td>testCases.US4CreateHeroWithVoucherAPI@385e9564</td></tr>
+<tr>
+<td title='testCases.US4CreateHeroWithVoucherAPI.US4testWithCsvData()'><b>US4testWithCsvData</b><br>Test class: testCases.US4CreateHeroWithVoucherAPI<br>Parameters: Test Case 10 - Negative - Name - Special Character, CSVRecord [comment='null', recordNumber=10, values=[Test Case 10 - Negative - Name - Special Character, Negative, natid-61, Jennifer-Lopez, FEMALE, 1996-02-01T23:59:59, null, 1001.00, 11.00, null, VOUCHER 10, TRAVEL, 400, Invalid name]]</td>
+<td></td>
+<td>0</td>
+<td>testCases.US4CreateHeroWithVoucherAPI@385e9564</td></tr>
+<tr>
+<td title='testCases.US1CreateHeroAPI.US1testWithCsvData()'><b>US1testWithCsvData</b><br>Test class: testCases.US1CreateHeroAPI<br>Parameters: Test Case 7 - Positive - Brownie Points Null, CSVRecord [comment='null', recordNumber=7, values=[Test Case 7 - Positive - Brownie Points Null, Positive, natid-17, Madeline Haw, FEMALE, 1996-01-01T23:59:59, null, 1000.00, 10.00, null, 200, ]]</td>
+<td></td>
+<td>0</td>
+<td>testCases.US1CreateHeroAPI@7530ad9c</td></tr>
+<tr>
+<td title='testCases.US1CreateHeroAPI.US1testWithCsvData()'><b>US1testWithCsvData</b><br>Test class: testCases.US1CreateHeroAPI<br>Parameters: Test Case 8 - Positive - Brownie Points Not Null, CSVRecord [comment='null', recordNumber=8, values=[Test Case 8 - Positive - Brownie Points Not Null, Positive, natid-18, Jessie Hock, FEMALE, 1996-01-01T23:59:59, null, 1000.00, 10.00, 20, 200, ]]</td>
+<td></td>
+<td>0</td>
+<td>testCases.US1CreateHeroAPI@7530ad9c</td></tr>
+<tr>
+<td title='testCases.US1CreateHeroAPI.US1testWithCsvData()'><b>US1testWithCsvData</b><br>Test class: testCases.US1CreateHeroAPI<br>Parameters: Test Case 15 - Negative - Birth Date - Wrong Format, CSVRecord [comment='null', recordNumber=15, values=[Test Case 15 - Negative - Birth Date - Wrong Format, Negative, natid-25, John Cena, MALE, 1996-01-01 23:59:59, null, 1000.00, 10.00, null, 400, Invalid birthdate format]]</td>
+<td></td>
+<td>0</td>
+<td>testCases.US1CreateHeroAPI@7530ad9c</td></tr>
+<tr>
+<td title='testCases.US4CreateHeroWithVoucherAPI.US4testWithCsvData()'><b>US4testWithCsvData</b><br>Test class: testCases.US4CreateHeroWithVoucherAPI<br>Parameters: Test Case 3 - Positive - Gender MALE, CSVRecord [comment='null', recordNumber=3, values=[Test Case 3 - Positive - Gender MALE, Positive, natid-53, Justin, MALE, 1996-01-01T23:59:59, null, 1000.00, 10.00, null, VOUCHER 3, TRAVEL, 200, ]]</td>
+<td></td>
+<td>0</td>
+<td>testCases.US4CreateHeroWithVoucherAPI@385e9564</td></tr>
+</table><p>
+</body>
+</html>

@@ -1,0 +1,16 @@
+package objectRepository;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class BookKeeperObject {
+
+	static WebElement element = null;
+	
+	public static WebElement btn_generate_tax_relief_clerk(WebDriver driver)
+	#Buttons
+	${btn_generate_tax_relief_clerk}    //button[@id='tax_relief_btn']
+
+	#Labels
+	${lbl_header_bk}    //h1[normalize-space()='Book Keeper Dashboard']
+}

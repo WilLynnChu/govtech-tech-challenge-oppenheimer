@@ -1,0 +1,13 @@
+package testCases;
+
+import org.testng.annotations.Test;
+import keywords.SQLHelper;
+
+public class US5GetHeroOweMoneyAPI {
+
+	@Test(description = "Test Case 1 - Get Hero Owe Money API - Positive")
+	public void testCase1() {
+		SQLHelper.queryDatabaseAndReturnResult("delete_file_by_status", null);
+	}
+	
+}

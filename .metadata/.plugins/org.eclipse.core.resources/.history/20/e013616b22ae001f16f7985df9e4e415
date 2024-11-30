@@ -1,0 +1,17 @@
+package testCases;
+
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import keywords.GenericKeywords;
+
+public class US3TaxReliefGenerationBKDashboard {
+
+	public static String test_time;
+	@Test
+	public void TestCase1() {
+		String test_time = GenericKeywords.testCurrentDateTime();
+		
+	}
+	
+}

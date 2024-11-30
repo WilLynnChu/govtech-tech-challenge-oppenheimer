@@ -1,0 +1,32 @@
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class BrowserTest {
+
+	public static void main(String[] args) {
+		
+//		Path projectPath = Paths.get("").toAbsolutePath();
+//        Path driversPath = projectPath.resolve("drivers");
+        
+//        CHROME
+//        System.setProperty("webdriver.chrome.driver", driversPath.resolve("chromedriver").toString());
+        ChromeOptions options = new ChromeOptions();
+        options.setCapability("goog:chromeOptions", "--remote-debugging-port=9222");
+        WebDriver driver = new ChromeDriver(options);
+
+//        FIREFOX
+        System.setProperty("webdriver.gecko.driver", driversPath.resolve("geckodriver").toString());
+		WebDriver driver = new FirefoxDriver(options);
+        
+		driver.get("https://www.google.com");
+		driver.get("https://www.seleniumhq.org");
+		driver.close();
+	}
+}

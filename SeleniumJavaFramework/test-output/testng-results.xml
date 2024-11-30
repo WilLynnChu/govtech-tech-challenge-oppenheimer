@@ -1,0 +1,1303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="54" passed="40" failed="14" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-11-30T11:50:15 MYT" name="Regression Suite" finished-at="2024-11-30T11:50:25 MYT" duration-ms="10344">
+    <groups>
+    </groups>
+    <test started-at="2024-11-30T11:50:15 MYT" name="Regression Test" finished-at="2024-11-30T11:50:25 MYT" duration-ms="10344">
+      <class name="testCases.US1CreateHeroAPI">
+        <test-method is-config="true" signature="testSetUp()[pri:0, instance:testCases.US1CreateHeroAPI@7530ad9c]" started-at="2024-11-30T11:50:15 MYT" name="testSetUp" finished-at="2024-11-30T11:50:15 MYT" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetUp -->
+        <test-method signature="US1testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US1CreateHeroAPI@7530ad9c]" started-at="2024-11-30T11:50:18 MYT" name="US1testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:19 MYT" duration-ms="835" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 1 - Positive - Natid - Birth Date - Salary - Tax Paid]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=1, values=[Test Case 1 - Positive - Natid - Birth Date - Salary - Tax Paid, Positive, natid-11, John Bosh, MALE, 1996-01-01T23:59:59, null, 1000.12, 10.00, null, 200, ]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US1testWithCsvData -->
+        <test-method signature="US1testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US1CreateHeroAPI@7530ad9c]" started-at="2024-11-30T11:50:19 MYT" name="US1testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:19 MYT" duration-ms="71" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 2 - Positive - Name]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=2, values=[Test Case 2 - Positive - Name, Positive, natid-12, John Cena, MALE, 1996-01-01T23:59:59, null, 1000.00, 10.00, null, 200, ]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US1testWithCsvData -->
+        <test-method signature="US1testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US1CreateHeroAPI@7530ad9c]" started-at="2024-11-30T11:50:19 MYT" name="US1testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:19 MYT" duration-ms="52" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 3 - Positive - Gender MALE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=3, values=[Test Case 3 - Positive - Gender MALE, Positive, natid-13, Chris John, MALE, 1996-01-01T23:59:59, null, 1000.00, 10.00, null, 200, ]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US1testWithCsvData -->
+        <test-method signature="US1testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US1CreateHeroAPI@7530ad9c]" started-at="2024-11-30T11:50:19 MYT" name="US1testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:19 MYT" duration-ms="48" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 4 - Positive - Gender FEMALE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=4, values=[Test Case 4 - Positive - Gender FEMALE, Positive, natid-14, Sasha NF, FEMALE, 1996-01-01T23:59:59, null, 1000.00, 10.00, null, 200, ]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US1testWithCsvData -->
+        <test-method signature="US1testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US1CreateHeroAPI@7530ad9c]" started-at="2024-11-30T11:50:19 MYT" name="US1testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:19 MYT" duration-ms="43" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 5 - Positive - Death Date Null]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=5, values=[Test Case 5 - Positive - Death Date Null, Positive, natid-15, Sasha Lee, FEMALE, 1996-01-01T23:59:59, null, 1000.00, 10.00, null, 200, ]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US1testWithCsvData -->
+        <test-method signature="US1testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US1CreateHeroAPI@7530ad9c]" started-at="2024-11-30T11:50:19 MYT" name="US1testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:20 MYT" duration-ms="98" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 6 - Positive - Death Date Not Null]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=6, values=[Test Case 6 - Positive - Death Date Not Null, Positive, natid-16, Sasha Tan, FEMALE, 1996-01-01T23:59:59, 2020-01-01T23:59:59, 1000.00, 10.00, null, 200, ]]]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [200] but found [500]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [200] but found [500]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at keywords.APIHelper.postAPI(APIHelper.java:106)
+at keywords.WorkingClassHeroes.createHeroAPI(WorkingClassHeroes.java:45)
+at testCases.US1CreateHeroAPI.US1testWithCsvData(US1CreateHeroAPI.java:63)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US1testWithCsvData -->
+        <test-method signature="US1testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US1CreateHeroAPI@7530ad9c]" started-at="2024-11-30T11:50:20 MYT" name="US1testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:20 MYT" duration-ms="48" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 7 - Positive - Brownie Points Null]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=7, values=[Test Case 7 - Positive - Brownie Points Null, Positive, natid-17, Madeline Haw, FEMALE, 1996-01-01T23:59:59, null, 1000.00, 10.00, null, 200, ]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US1testWithCsvData -->
+        <test-method signature="US1testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US1CreateHeroAPI@7530ad9c]" started-at="2024-11-30T11:50:20 MYT" name="US1testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:20 MYT" duration-ms="67" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 8 - Positive - Brownie Points Not Null]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=8, values=[Test Case 8 - Positive - Brownie Points Not Null, Positive, natid-18, Jessie Hock, FEMALE, 1996-01-01T23:59:59, null, 1000.00, 10.00, 20, 200, ]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US1testWithCsvData -->
+        <test-method signature="US1testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US1CreateHeroAPI@7530ad9c]" started-at="2024-11-30T11:50:20 MYT" name="US1testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:20 MYT" duration-ms="33" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 9 - Negative - Natid - Wrong Format]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=9, values=[Test Case 9 - Negative - Natid - Wrong Format, Negative, natid-1a, Jennifer Lopez, FEMALE, 1996-02-01T23:59:59, null, 1001.00, 11.00, null, 400, Invalid natid]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US1testWithCsvData -->
+        <test-method signature="US1testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US1CreateHeroAPI@7530ad9c]" started-at="2024-11-30T11:50:20 MYT" name="US1testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:20 MYT" duration-ms="20" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 10 - Negative - Natid - Number Above 9999999]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=10, values=[Test Case 10 - Negative - Natid - Number Above 9999999, Negative, natid-99999990, Jennifer Lopez, FEMALE, 1996-02-01T23:59:59, null, 1001.00, 11.00, null, 400, Invalid natid]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US1testWithCsvData -->
+        <test-method signature="US1testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US1CreateHeroAPI@7530ad9c]" started-at="2024-11-30T11:50:20 MYT" name="US1testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:20 MYT" duration-ms="34" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 11 - Negative - Name - Special Character]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=11, values=[Test Case 11 - Negative - Name - Special Character, Negative, natid-21, Jennifer-Lopez, FEMALE, 1996-02-01T23:59:59, null, 1001.00, 11.00, null, 400, Invalid name]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US1testWithCsvData -->
+        <test-method signature="US1testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US1CreateHeroAPI@7530ad9c]" started-at="2024-11-30T11:50:20 MYT" name="US1testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:20 MYT" duration-ms="24" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 12 - Negative - Name - Number]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=12, values=[Test Case 12 - Negative - Name - Number, Negative, natid-22, Jennifer9Lopez, FEMALE, 1996-02-01T23:59:59, null, 1001.00, 11.00, null, 400, Invalid name]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US1testWithCsvData -->
+        <test-method signature="US1testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US1CreateHeroAPI@7530ad9c]" started-at="2024-11-30T11:50:20 MYT" name="US1testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:20 MYT" duration-ms="22" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 13 - Negative - Name - More than 100 characters]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=13, values=[Test Case 13 - Negative - Name - More than 100 characters, Negative, natid-23, Jennifer Lopez Jennifer Lopez Jennifer Lopez Jennifer Lopez Jennifer Lopez Jennifer Lopez Jennifer Lopez, FEMALE, 1996-02-01T23:59:59, null, 1001.00, 11.00, null, 400, Name must be between 1 and 100 characters]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US1testWithCsvData -->
+        <test-method signature="US1testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US1CreateHeroAPI@7530ad9c]" started-at="2024-11-30T11:50:20 MYT" name="US1testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:20 MYT" duration-ms="20" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 14 - Negative - Gender - Invalid Capitalisation]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=14, values=[Test Case 14 - Negative - Gender - Invalid Capitalisation, Negative, natid-24, John Cena, male, 1996-01-01T23:59:59, null, 1000.00, 10.00, null, 400, Invalid gender]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US1testWithCsvData -->
+        <test-method signature="US1testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US1CreateHeroAPI@7530ad9c]" started-at="2024-11-30T11:50:20 MYT" name="US1testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:20 MYT" duration-ms="29" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 15 - Negative - Birth Date - Wrong Format]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=15, values=[Test Case 15 - Negative - Birth Date - Wrong Format, Negative, natid-25, John Cena, MALE, 1996-01-01 23:59:59, null, 1000.00, 10.00, null, 400, Invalid birthdate format]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US1testWithCsvData -->
+        <test-method signature="US1testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US1CreateHeroAPI@7530ad9c]" started-at="2024-11-30T11:50:20 MYT" name="US1testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:20 MYT" duration-ms="28" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 16 - Negative - Birth Date - Future Date]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=16, values=[Test Case 16 - Negative - Birth Date - Future Date, Negative, natid-26, John Cena, MALE, 3000-01-01T23:59:59, null, 1000.00, 10.00, null, 400, There are some issues with working class hero]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US1testWithCsvData -->
+        <test-method signature="US1testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US1CreateHeroAPI@7530ad9c]" started-at="2024-11-30T11:50:20 MYT" name="US1testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:20 MYT" duration-ms="26" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 17 - Negative - Death Date - Wrong Format]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=17, values=[Test Case 17 - Negative - Death Date - Wrong Format, Negative, natid-27, John Cena, MALE, 1996-01-01T23:59:59, 2020-21-01T23:59:59, 1000.00, 10.00, null, 400, Invalid deathdate format]]]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [400] but found [500]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [400] but found [500]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at keywords.APIHelper.postAPI(APIHelper.java:106)
+at keywords.WorkingClassHeroes.createHeroAPI(WorkingClassHeroes.java:45)
+at testCases.US1CreateHeroAPI.US1testWithCsvData(US1CreateHeroAPI.java:63)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US1testWithCsvData -->
+        <test-method signature="US1testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US1CreateHeroAPI@7530ad9c]" started-at="2024-11-30T11:50:20 MYT" name="US1testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:20 MYT" duration-ms="23" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 18 - Negative - Salary - String]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=18, values=[Test Case 18 - Negative - Salary - String, Negative, natid-28, John Cena, MALE, 1996-01-01T23:59:59, null, One Thousand, 10.00, null, 400, ]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US1testWithCsvData -->
+        <test-method signature="US1testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US1CreateHeroAPI@7530ad9c]" started-at="2024-11-30T11:50:20 MYT" name="US1testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:20 MYT" duration-ms="23" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 19 - Negative - Salary - Negative Number]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=19, values=[Test Case 19 - Negative - Salary - Negative Number, Negative, natid-29, John Cena, MALE, 1996-01-01T23:59:59, null, -1000.00, 10.00, null, 400, Salary must be greater than or equals to zero]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US1testWithCsvData -->
+        <test-method signature="US1testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US1CreateHeroAPI@7530ad9c]" started-at="2024-11-30T11:50:20 MYT" name="US1testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:20 MYT" duration-ms="20" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 20 - Negative - Tax Paid - String]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=20, values=[Test Case 20 - Negative - Tax Paid - String, Negative, natid-30, John Cena, MALE, 1996-01-01T23:59:59, null, 1000.00, ten, null, 400, ]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US1testWithCsvData -->
+        <test-method signature="US1testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US1CreateHeroAPI@7530ad9c]" started-at="2024-11-30T11:50:20 MYT" name="US1testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:20 MYT" duration-ms="15" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 21 - Negative - Tax Paid - Negative Number]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=21, values=[Test Case 21 - Negative - Tax Paid - Negative Number, Negative, natid-31, John Cena, MALE, 1996-01-01T23:59:59, null, 1000.00, -10.00, null, 400, Tax paid must be greater than or equals to zero]]]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Tax paid must be greater than or equals to zero] but found [must be greater than or equal to 0]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Tax paid must be greater than or equals to zero] but found [must be greater than or equal to 0]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at keywords.WorkingClassHeroes.verifyCreateHeroAPIResponseMessage(WorkingClassHeroes.java:83)
+at testCases.US1CreateHeroAPI.US1testWithCsvData(US1CreateHeroAPI.java:64)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US1testWithCsvData -->
+      </class> <!-- testCases.US1CreateHeroAPI -->
+      <class name="testCases.US2CreateHeroClerkDashboard">
+        <test-method is-config="true" signature="testSetUp()[pri:0, instance:testCases.US2CreateHeroClerkDashboard@399c4be1]" started-at="2024-11-30T11:50:15 MYT" name="testSetUp" finished-at="2024-11-30T11:50:17 MYT" duration-ms="2217" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetUp -->
+        <test-method signature="US2testCase1()[pri:0, instance:testCases.US2CreateHeroClerkDashboard@399c4be1]" started-at="2024-11-30T11:50:20 MYT" name="US2testCase1" description="Test Case 1 - Clerk Dashboard Create Heroes Upload CSV File - Positive" finished-at="2024-11-30T11:50:22 MYT" duration-ms="1528" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US2testCase1 -->
+        <test-method signature="US2testCase10()[pri:0, instance:testCases.US2CreateHeroClerkDashboard@399c4be1]" started-at="2024-11-30T11:50:22 MYT" name="US2testCase10" description="Test Case 10 - Partial Data Wrong Format - Negative - gender - Wrong Format" finished-at="2024-11-30T11:50:22 MYT" duration-ms="20" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US2testCase10 -->
+        <test-method signature="US2testCase11()[pri:0, instance:testCases.US2CreateHeroClerkDashboard@399c4be1]" started-at="2024-11-30T11:50:22 MYT" name="US2testCase11" description="Test Case 11 - Partial Data Wrong Format - Positive - positive records after negative will still be created" finished-at="2024-11-30T11:50:22 MYT" duration-ms="8" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Positive Record Not Created In DB]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Positive Record Not Created In DB
+at keywords.Clerk.verifyPartialUploadedDataInDB(Clerk.java:159)
+at testCases.US2CreateHeroClerkDashboard.US2testCase11(US2CreateHeroClerkDashboard.java:100)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US2testCase11 -->
+        <test-method signature="US2testCase2()[pri:0, instance:testCases.US2CreateHeroClerkDashboard@399c4be1]" started-at="2024-11-30T11:50:22 MYT" name="US2testCase2" description="Test Case 2 - Clerk Dashboard Create Heroes Upload CSV File - Negative - Partial Data Wrong Format" finished-at="2024-11-30T11:50:23 MYT" duration-ms="1092" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US2testCase2 -->
+        <test-method signature="US2testCase3()[pri:0, instance:testCases.US2CreateHeroClerkDashboard@399c4be1]" started-at="2024-11-30T11:50:23 MYT" name="US2testCase3" description="Test Case 3 - Partial Data Wrong Format - Positive" finished-at="2024-11-30T11:50:23 MYT" duration-ms="36" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US2testCase3 -->
+        <test-method signature="US2testCase4()[pri:0, instance:testCases.US2CreateHeroClerkDashboard@399c4be1]" started-at="2024-11-30T11:50:23 MYT" name="US2testCase4" description="Test Case 4 - Partial Data Wrong Format - Negative - name" finished-at="2024-11-30T11:50:23 MYT" duration-ms="18" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Negative Record With Invalid Column Named "name" Should Not Be Created In DB]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Negative Record With Invalid Column Named "name" Should Not Be Created In DB
+at keywords.Clerk.verifyPartialUploadedDataInDB(Clerk.java:165)
+at testCases.US2CreateHeroClerkDashboard.US2testCase4(US2CreateHeroClerkDashboard.java:58)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US2testCase4 -->
+        <test-method signature="US2testCase5()[pri:0, instance:testCases.US2CreateHeroClerkDashboard@399c4be1]" started-at="2024-11-30T11:50:23 MYT" name="US2testCase5" description="Test Case 5 - Partial Data Wrong Format - Negative - gender - Missing" finished-at="2024-11-30T11:50:23 MYT" duration-ms="16" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Negative Record With Invalid Column Named "gender" Should Not Be Created In DB]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Negative Record With Invalid Column Named "gender" Should Not Be Created In DB
+at keywords.Clerk.verifyPartialUploadedDataInDB(Clerk.java:165)
+at testCases.US2CreateHeroClerkDashboard.US2testCase5(US2CreateHeroClerkDashboard.java:64)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US2testCase5 -->
+        <test-method signature="US2testCase6()[pri:0, instance:testCases.US2CreateHeroClerkDashboard@399c4be1]" started-at="2024-11-30T11:50:23 MYT" name="US2testCase6" description="Test Case 6 - Partial Data Wrong Format - Negative - birth_date" finished-at="2024-11-30T11:50:23 MYT" duration-ms="9" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Negative Record With Invalid Column Named "birth_date" Should Not Be Created In DB]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Negative Record With Invalid Column Named "birth_date" Should Not Be Created In DB
+at keywords.Clerk.verifyPartialUploadedDataInDB(Clerk.java:165)
+at testCases.US2CreateHeroClerkDashboard.US2testCase6(US2CreateHeroClerkDashboard.java:70)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US2testCase6 -->
+        <test-method signature="US2testCase7()[pri:0, instance:testCases.US2CreateHeroClerkDashboard@399c4be1]" started-at="2024-11-30T11:50:23 MYT" name="US2testCase7" description="Test Case 7 - Partial Data Wrong Format - Negative - salary" finished-at="2024-11-30T11:50:23 MYT" duration-ms="8" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Negative Record With Invalid Column Named "salary" Should Not Be Created In DB]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Negative Record With Invalid Column Named "salary" Should Not Be Created In DB
+at keywords.Clerk.verifyPartialUploadedDataInDB(Clerk.java:165)
+at testCases.US2CreateHeroClerkDashboard.US2testCase7(US2CreateHeroClerkDashboard.java:76)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US2testCase7 -->
+        <test-method signature="US2testCase8()[pri:0, instance:testCases.US2CreateHeroClerkDashboard@399c4be1]" started-at="2024-11-30T11:50:23 MYT" name="US2testCase8" description="Test Case 8 - Partial Data Wrong Format - Negative - tax_paid" finished-at="2024-11-30T11:50:23 MYT" duration-ms="8" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Negative Record With Invalid Column Named "tax_paid" Should Not Be Created In DB]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Negative Record With Invalid Column Named "tax_paid" Should Not Be Created In DB
+at keywords.Clerk.verifyPartialUploadedDataInDB(Clerk.java:165)
+at testCases.US2CreateHeroClerkDashboard.US2testCase8(US2CreateHeroClerkDashboard.java:82)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US2testCase8 -->
+        <test-method signature="US2testCase9()[pri:0, instance:testCases.US2CreateHeroClerkDashboard@399c4be1]" started-at="2024-11-30T11:50:23 MYT" name="US2testCase9" description="Test Case 9 - Partial Data Wrong Format - Positive - positive records before negative will still be created" finished-at="2024-11-30T11:50:23 MYT" duration-ms="7" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Positive Record Not Created In DB]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Positive Record Not Created In DB
+at keywords.Clerk.verifyPartialUploadedDataInDB(Clerk.java:159)
+at testCases.US2CreateHeroClerkDashboard.US2testCase9(US2CreateHeroClerkDashboard.java:88)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US2testCase9 -->
+        <test-method is-config="true" signature="testTearDown()[pri:0, instance:testCases.US2CreateHeroClerkDashboard@399c4be1]" started-at="2024-11-30T11:50:25 MYT" name="testTearDown" finished-at="2024-11-30T11:50:25 MYT" duration-ms="171" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTearDown -->
+      </class> <!-- testCases.US2CreateHeroClerkDashboard -->
+      <class name="testCases.US5GetHeroOweMoneyAPI">
+        <test-method is-config="true" signature="testSetUp()[pri:0, instance:testCases.US5GetHeroOweMoneyAPI@5b94b04d]" started-at="2024-11-30T11:50:18 MYT" name="testSetUp" finished-at="2024-11-30T11:50:18 MYT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetUp -->
+        <test-method signature="US5testCase1()[pri:0, instance:testCases.US5GetHeroOweMoneyAPI@5b94b04d]" started-at="2024-11-30T11:50:25 MYT" name="US5testCase1" description="Test Case 1 - Get Hero Owe Money API - Positive" finished-at="2024-11-30T11:50:25 MYT" duration-ms="12" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [200] but found [400]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [200] but found [400]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at keywords.APIHelper.getAPI(APIHelper.java:67)
+at keywords.WorkingClassHeroes.getHeroOweMoneyAPI(WorkingClassHeroes.java:118)
+at testCases.US5GetHeroOweMoneyAPI.US5testCase1(US5GetHeroOweMoneyAPI.java:20)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US5testCase1 -->
+        <test-method signature="US5testCase2()[pri:0, instance:testCases.US5GetHeroOweMoneyAPI@5b94b04d]" started-at="2024-11-30T11:50:25 MYT" name="US5testCase2" description="Test Case 2 - Get Hero Owe Money API - Negative" finished-at="2024-11-30T11:50:25 MYT" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US5testCase2 -->
+      </class> <!-- testCases.US5GetHeroOweMoneyAPI -->
+      <class name="testCases.US4CreateHeroWithVoucherAPI">
+        <test-method is-config="true" signature="testSetUp()[pri:0, instance:testCases.US4CreateHeroWithVoucherAPI@385e9564]" started-at="2024-11-30T11:50:18 MYT" name="testSetUp" finished-at="2024-11-30T11:50:18 MYT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetUp -->
+        <test-method signature="US4testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US4CreateHeroWithVoucherAPI@385e9564]" started-at="2024-11-30T11:50:24 MYT" name="US4testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:24 MYT" duration-ms="116" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 1 - Positive - Natid - Birth Date - Salary - Tax Paid]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=1, values=[Test Case 1 - Positive - Natid - Birth Date - Salary - Tax Paid, Positive, natid-51, John Bosh, MALE, 1996-01-01T23:59:59, null, 1000.12, 10.00, null, VOUCHER 1, TRAVEL, 200, ]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US4testWithCsvData -->
+        <test-method signature="US4testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US4CreateHeroWithVoucherAPI@385e9564]" started-at="2024-11-30T11:50:24 MYT" name="US4testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:24 MYT" duration-ms="63" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 2 - Positive - Name]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=2, values=[Test Case 2 - Positive - Name, Positive, natid-52, Shawn, MALE, 1996-01-01T23:59:59, null, 1000.00, 10.00, null, VOUCHER 2, FOOD, 200, ]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US4testWithCsvData -->
+        <test-method signature="US4testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US4CreateHeroWithVoucherAPI@385e9564]" started-at="2024-11-30T11:50:24 MYT" name="US4testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:24 MYT" duration-ms="63" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 3 - Positive - Gender MALE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=3, values=[Test Case 3 - Positive - Gender MALE, Positive, natid-53, Justin, MALE, 1996-01-01T23:59:59, null, 1000.00, 10.00, null, VOUCHER 3, TRAVEL, 200, ]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US4testWithCsvData -->
+        <test-method signature="US4testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US4CreateHeroWithVoucherAPI@385e9564]" started-at="2024-11-30T11:50:24 MYT" name="US4testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:24 MYT" duration-ms="76" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 4 - Positive - Gender FEMALE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=4, values=[Test Case 4 - Positive - Gender FEMALE, Positive, natid-54, Grace, FEMALE, 1996-01-01T23:59:59, null, 1000.00, 10.00, null, VOUCHER 4, TRAVEL, 200, ]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US4testWithCsvData -->
+        <test-method signature="US4testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US4CreateHeroWithVoucherAPI@385e9564]" started-at="2024-11-30T11:50:24 MYT" name="US4testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:24 MYT" duration-ms="49" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 5 - Positive - Death Date Null]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=5, values=[Test Case 5 - Positive - Death Date Null, Positive, natid-55, Yenn Yee, FEMALE, 1996-01-01T23:59:59, null, 1000.00, 10.00, null, VOUCHER 5, FOOD, 200, ]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US4testWithCsvData -->
+        <test-method signature="US4testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US4CreateHeroWithVoucherAPI@385e9564]" started-at="2024-11-30T11:50:24 MYT" name="US4testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:24 MYT" duration-ms="42" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 6 - Positive - Brownie Points Null]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=6, values=[Test Case 6 - Positive - Brownie Points Null, Positive, natid-56, Angel, FEMALE, 1996-01-01T23:59:59, null, 1000.00, 10.00, null, VOUCHER 6, TRAVEL, 200, ]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US4testWithCsvData -->
+        <test-method signature="US4testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US4CreateHeroWithVoucherAPI@385e9564]" started-at="2024-11-30T11:50:24 MYT" name="US4testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:24 MYT" duration-ms="51" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 7 - Positive - Brownie Points Not Null]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=7, values=[Test Case 7 - Positive - Brownie Points Not Null, Positive, natid-56, DeDe, FEMALE, 1996-01-01T23:59:59, null, 1000.00, 10.00, 5, VOUCHER 7, TRAVEL, 200, ]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US4testWithCsvData -->
+        <test-method signature="US4testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US4CreateHeroWithVoucherAPI@385e9564]" started-at="2024-11-30T11:50:24 MYT" name="US4testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:24 MYT" duration-ms="33" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 8 - Negative - Natid - Wrong Format]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=8, values=[Test Case 8 - Negative - Natid - Wrong Format, Negative, natid-5a, Yue Yue, FEMALE, 1996-02-01T23:59:59, null, 1001.00, 11.00, null, VOUCHER 8, SPORT, 400, ]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US4testWithCsvData -->
+        <test-method signature="US4testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US4CreateHeroWithVoucherAPI@385e9564]" started-at="2024-11-30T11:50:24 MYT" name="US4testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:24 MYT" duration-ms="31" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 9 - Negative - Natid - Number Above 9999999]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=9, values=[Test Case 9 - Negative - Natid - Number Above 9999999, Negative, natid-9999999990, Beatrice, FEMALE, 1996-02-01T23:59:59, null, 1001.00, 11.00, null, VOUCHER 9, TRAVEL, 400, Invalid natid]]]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [400] but found [200]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [400] but found [200]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at keywords.APIHelper.postAPI(APIHelper.java:106)
+at keywords.WorkingClassHeroes.createHeroWithVoucherAPI(WorkingClassHeroes.java:68)
+at testCases.US4CreateHeroWithVoucherAPI.US4testWithCsvData(US4CreateHeroWithVoucherAPI.java:64)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US4testWithCsvData -->
+        <test-method signature="US4testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US4CreateHeroWithVoucherAPI@385e9564]" started-at="2024-11-30T11:50:24 MYT" name="US4testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:24 MYT" duration-ms="29" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 10 - Negative - Name - Special Character]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=10, values=[Test Case 10 - Negative - Name - Special Character, Negative, natid-61, Jennifer-Lopez, FEMALE, 1996-02-01T23:59:59, null, 1001.00, 11.00, null, VOUCHER 10, TRAVEL, 400, Invalid name]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US4testWithCsvData -->
+        <test-method signature="US4testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US4CreateHeroWithVoucherAPI@385e9564]" started-at="2024-11-30T11:50:24 MYT" name="US4testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:24 MYT" duration-ms="41" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 11 - Negative - Name - Number]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=11, values=[Test Case 11 - Negative - Name - Number, Negative, natid-62, Jennifer9Lopez, FEMALE, 1996-02-01T23:59:59, null, 1001.00, 11.00, null, VOUCHER 11, FOOD, 400, Invalid name]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US4testWithCsvData -->
+        <test-method signature="US4testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US4CreateHeroWithVoucherAPI@385e9564]" started-at="2024-11-30T11:50:24 MYT" name="US4testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:25 MYT" duration-ms="32" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 12 - Negative - Name - More than 100 characters]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=12, values=[Test Case 12 - Negative - Name - More than 100 characters, Negative, natid-63, Jennifer Lopez Jennifer Lopez Jennifer Lopez Jennifer Lopez Jennifer Lopez Jennifer Lopez Jennifer Lopez, FEMALE, 1996-02-01T23:59:59, null, 1001.00, 11.00, null, VOUCHER 12, FOOD, 400, Name must be between 1 and 100 characters]]]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [400] but found [200]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [400] but found [200]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at keywords.APIHelper.postAPI(APIHelper.java:106)
+at keywords.WorkingClassHeroes.createHeroWithVoucherAPI(WorkingClassHeroes.java:68)
+at testCases.US4CreateHeroWithVoucherAPI.US4testWithCsvData(US4CreateHeroWithVoucherAPI.java:64)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US4testWithCsvData -->
+        <test-method signature="US4testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US4CreateHeroWithVoucherAPI@385e9564]" started-at="2024-11-30T11:50:25 MYT" name="US4testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:25 MYT" duration-ms="28" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 13 - Negative - Gender - Invalid Capitalisation]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=13, values=[Test Case 13 - Negative - Gender - Invalid Capitalisation, Negative, natid-64, John Cena, male, 1996-01-01T23:59:59, null, 1000.00, 10.00, null, VOUCHER 13, FOOD, 400, Invalid gender]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US4testWithCsvData -->
+        <test-method signature="US4testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US4CreateHeroWithVoucherAPI@385e9564]" started-at="2024-11-30T11:50:25 MYT" name="US4testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:25 MYT" duration-ms="33" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 14 - Negative - Birth Date - Wrong Format]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=14, values=[Test Case 14 - Negative - Birth Date - Wrong Format, Negative, natid-65, John Cena, MALE, 1996-01-01 23:59:59, null, 1000.00, 10.00, null, VOUCHER 14, SPORT, 400, ]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US4testWithCsvData -->
+        <test-method signature="US4testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US4CreateHeroWithVoucherAPI@385e9564]" started-at="2024-11-30T11:50:25 MYT" name="US4testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:25 MYT" duration-ms="44" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 15 - Negative - Birth Date - Future Date]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=15, values=[Test Case 15 - Negative - Birth Date - Future Date, Negative, natid-66, John Cena, MALE, 3000-01-01T23:59:59, null, 1000.00, 10.00, null, VOUCHER 15, TRAVEL, 400, There are some issues with working class hero]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US4testWithCsvData -->
+        <test-method signature="US4testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US4CreateHeroWithVoucherAPI@385e9564]" started-at="2024-11-30T11:50:25 MYT" name="US4testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:25 MYT" duration-ms="38" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 16 - Negative - Salary - String]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=16, values=[Test Case 16 - Negative - Salary - String, Negative, natid-67, John Cena, MALE, 1996-01-01T23:59:59, null, One Thousand, 10.00, null, VOUCHER 16, SPORT, 400, ]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US4testWithCsvData -->
+        <test-method signature="US4testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US4CreateHeroWithVoucherAPI@385e9564]" started-at="2024-11-30T11:50:25 MYT" name="US4testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:25 MYT" duration-ms="43" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 17 - Negative - Salary - Negative Number]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=17, values=[Test Case 17 - Negative - Salary - Negative Number, Negative, natid-68, John Cena, MALE, 1996-01-01T23:59:59, null, -1000.00, 10.00, null, VOUCHER 17, TRAVEL, 400, Salary must be greater than or equals to zero]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US4testWithCsvData -->
+        <test-method signature="US4testWithCsvData(java.lang.String,org.apache.commons.csv.CSVRecord)[pri:0, instance:testCases.US4CreateHeroWithVoucherAPI@385e9564]" started-at="2024-11-30T11:50:25 MYT" name="US4testWithCsvData" data-provider="csvDataProvider" finished-at="2024-11-30T11:50:25 MYT" duration-ms="29" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Case 18 - Negative - Tax Paid - String]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CSVRecord [comment='null', recordNumber=18, values=[Test Case 18 - Negative - Tax Paid - String, Negative, natid-69, John Cena, MALE, 1996-01-01T23:59:59, null, 1000.00, ten, null, VOUCHER 18, TRAVEL, 400, ]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US4testWithCsvData -->
+      </class> <!-- testCases.US4CreateHeroWithVoucherAPI -->
+      <class name="testCases.US3TaxReliefGenerationBKDashboard">
+        <test-method is-config="true" signature="testSetUp()[pri:0, instance:testCases.US3TaxReliefGenerationBKDashboard@291caca8]" started-at="2024-11-30T11:50:17 MYT" name="testSetUp" finished-at="2024-11-30T11:50:18 MYT" duration-ms="1311" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetUp -->
+        <test-method signature="US3testCase1()[pri:0, instance:testCases.US3TaxReliefGenerationBKDashboard@291caca8]" started-at="2024-11-30T11:50:23 MYT" name="US3testCase1" finished-at="2024-11-30T11:50:24 MYT" duration-ms="1126" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[file_status: NEW is not equal to COMPLETED! expected [NEW] but found [COMPLETED]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: file_status: NEW is not equal to COMPLETED! expected [NEW] but found [COMPLETED]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at keywords.BookKeeper.verifyDBFileTable(BookKeeper.java:124)
+at testCases.US3TaxReliefGenerationBKDashboard.US3testCase1(US3TaxReliefGenerationBKDashboard.java:31)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US3testCase1 -->
+        <test-method is-config="true" signature="testTearDown()[pri:0, instance:testCases.US3TaxReliefGenerationBKDashboard@291caca8]" started-at="2024-11-30T11:50:25 MYT" name="testTearDown" finished-at="2024-11-30T11:50:25 MYT" duration-ms="130" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTearDown -->
+      </class> <!-- testCases.US3TaxReliefGenerationBKDashboard -->
+      <class name="testCases.US6GetVoucherByPersonTypeAPI">
+        <test-method is-config="true" signature="testSetUp()[pri:0, instance:testCases.US6GetVoucherByPersonTypeAPI@8c3b9d]" started-at="2024-11-30T11:50:18 MYT" name="testSetUp" finished-at="2024-11-30T11:50:18 MYT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetUp -->
+        <test-method signature="US6testCase1()[pri:0, instance:testCases.US6GetVoucherByPersonTypeAPI@8c3b9d]" started-at="2024-11-30T11:50:25 MYT" name="US6testCase1" description="Test Case 1 - Get And Verify Json Schema of Voucher By Person And Type API - Positive" finished-at="2024-11-30T11:50:25 MYT" duration-ms="109" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- US6testCase1 -->
+      </class> <!-- testCases.US6GetVoucherByPersonTypeAPI -->
+    </test> <!-- Regression Test -->
+  </suite> <!-- Regression Suite -->
+</testng-results>

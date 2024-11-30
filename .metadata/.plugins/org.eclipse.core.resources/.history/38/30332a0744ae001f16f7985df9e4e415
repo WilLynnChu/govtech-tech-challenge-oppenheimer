@@ -1,0 +1,125 @@
+package keywords;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.TimeUnit;
+
+import objectRepository.APIObject;
+import objectRepository.BookKeeperObject;
+
+public class BookKeeper extends BookKeeperObject{
+	
+	static String filePath = GenericKeywords.test_output_path + "/tax_relief_file.txt";
+
+	public static void generateTaxReliefFile(WebDriver driver) {
+		if (lbl_header_bk(driver).isDisplayed()) {
+            btn_generate_tax_relief_clerk(driver).click();
+        }
+		verifyTaxReliefFileExist();
+	}
+	
+	public static void verifyTaxReliefFileExist() {
+		// Define the file path
+        
+        
+        // Number of retry attempts
+        int maxRetries = 10;
+        int retryCount = 0;
+        boolean fileExists = false;
+        
+        while (retryCount < maxRetries) {
+            File file = new File(filePath);
+
+            if (file.exists()) {
+                System.out.println("File exists: " + filePath);
+                fileExists = true;
+                break; // Exit the loop if the file exists
+            } else {
+                System.out.println("Attempt " + (retryCount + 1) + ": File does not exist. Retrying...");
+                retryCount++;
+                
+                // Wait for a short delay before retrying (e.g., 2 seconds)
+                try {
+                    TimeUnit.MILLISECONDS.sleep(500);
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt(); // Restore the interrupted status
+                    System.err.println("Retry interrupted: " + e.getMessage());
+                    return; // Exit the method if interrupted
+                }
+            }
+        }
+
+        if (!fileExists) {
+            throw new RuntimeException("File did not exist after " + maxRetries + " attempts: " + filePath);
+        }
+	}
+	
+	public static void verifyTaxReliefFileContent() {
+		List<String[]> tax_relief_file_content = CSVReader.readCsvFileToList(filePath);
+		int listSize = tax_relief_file_content.size();
+		String fileContentFooter = tax_relief_file_content.get(listSize - 1)[0];
+		tax_relief_file_content.remove(listSize - 1);
+		
+		List<Map<String, Object>> dbContent = SQLHelper.queryDatabaseAndReturnResult("select_hero", null);
+
+        
+        
+		List<Map<String, Object>> dbCount = SQLHelper.queryDatabaseAndReturnResult("select_count_hero", null);
+		compareDBCountWithGeneratedFileFooter(dbCount,fileContentFooter);
+		compareDBContentWithGeneratedFileContent(dbContent, tax_relief_file_content);
+	}
+
+    public static void compareDBCountWithGeneratedFileFooter(List<Map<String, Object>> dbCount, String fileContentFooter) {
+	    System.out.println("\ndbCount: \n" + dbCount + "\n");
+	    String dbCountValueString = SQLHelper.getFirstRowKeyValueFromDBResult(dbCount, "count");
+	    System.out.println("\n\n\n\n\ndbCount String: \n" + dbCountValueString + "\n\n\n\n\n");
+	    Assert.assertEquals(dbCountValueString, fileContentFooter, "dbCountValueString: " + dbCountValueString + "\nfileContentFooter: " + fileContentFooter + "\nare not equal!");
+    }
+	
+	public static void compareDBContentWithGeneratedFileContent(List<Map<String, Object>> dbContent, List<String[]> taxReliefFileContent) {
+		System.out.println("\n dbContent: \n" + dbContent + "\n");
+        // Iterate over each row in tax_relief_file_content
+        for (String[] row : taxReliefFileContent) {
+            int dbLoopCount = 0;
+            Iterator<Map<String, Object>> iterator = dbContent.iterator();
+
+            // Iterate over db_content
+            while (iterator.hasNext()) {
+                Map<String, Object> dict = iterator.next();
+
+                // Check if the 'natid' from dbContent matches the current row's first element
+                if (dict.containsKey("natid") && dict.get("natid").toString().equals(row[0])) {
+                	System.out.println("natid: " + dict.get("natid").toString() + " matched!");
+                    // Remove the matching entry from dbContent
+                    iterator.remove();
+                } else {
+                    dbLoopCount++;
+                }
+            }
+        }
+
+        // Print out the remaining dbContent for verification
+        System.out.println("Remaining dbContent: " + dbContent);
+    }
+	
+	public static void verifyDBFileTable(String test_start_time) {
+		String current_time = GenericKeywords.testCurrentDateTime();
+		Map<String, String> sql_dict = SQLHelper.createSQLDictionary();
+		sql_dict = SQLHelper.addToSQLDictionary(sql_dict, "value_start_time", test_start_time);
+		sql_dict = SQLHelper.addToSQLDictionary(sql_dict, "value_current_time", current_time);
+		List<Map<String, Object>> sql_file_response = SQLHelper.queryDatabaseAndReturnResult("select_file_by_time_range", sql_dict);
+		String file_type = SQLHelper.getFirstRowKeyValueFromDBResult(sql_file_response, "file_type");
+		String file_status = SQLHelper.getFirstRowKeyValueFromDBResult(sql_file_response, "file_status");
+	}
+}
