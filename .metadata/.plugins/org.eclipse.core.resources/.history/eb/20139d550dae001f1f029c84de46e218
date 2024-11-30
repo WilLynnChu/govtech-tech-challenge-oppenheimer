@@ -1,0 +1,55 @@
+package objectRepository;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class ClerkObject {
+
+	static WebElement element = null;
+	
+	public static WebElement btn_add_hero_clerk(WebDriver driver) {
+		
+		element = driver.findElement(By.id("dropdownMenuButton2"));//button[@id='dropdownMenuButton2']
+		return element;
+	}
+	
+	${btn_create_clerk}    //button[normalize-space()='Create']
+	public static WebElement lbl_name_page(WebDriver driver) {
+		element = driver.findElement(By.xpath("//xpath"));
+		return element;
+	}
+
+	#Dropdown
+	${dropdown_option_upload_csv_clerk}    //a[@class='dropdown-item' and text()='Upload a csv file']
+	public static WebElement lbl_name_page(WebDriver driver) {
+		element = driver.findElement(By.xpath("//xpath"));
+		return element;
+	}
+
+	#Labels
+	${lbl_header_clerk}    //h1[normalize-space()='Clerk Dashboard']
+	public static WebElement lbl_name_page(WebDriver driver) {
+		element = driver.findElement(By.xpath("//xpath"));
+		return element;
+	}
+	${lbl_created_success_clerk}    //div[@class='bg-success pt-2']
+	public static WebElement lbl_name_page(WebDriver driver) {
+		element = driver.findElement(By.xpath("//xpath"));
+		return element;
+	}
+	${lbl_created_unsuccess_warning_clerk}    //div[@class='bg-warning pt-2']
+	public static WebElement lbl_name_page(WebDriver driver) {
+		element = driver.findElement(By.xpath("//xpath"));
+		return element;
+	}
+
+	#Text Fields
+	${input_upload_csv_file_clerk}    //input[@id='upload-csv-file']
+	public static WebElement btn_name_page(WebDriver driver) {
+		
+		element = driver.findElement(By.id(""));
+		return element;
+	}
+
+}

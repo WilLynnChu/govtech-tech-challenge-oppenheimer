@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+    <fullyQualifiedTypeName name="org.testng.annotations.BeforeTest"/>
+    <fullyQualifiedTypeName name="keywords.Login"/>
+    <fullyQualifiedTypeName name="org.testng.annotations.AfterTest"/>
+    <fullyQualifiedTypeName name="objectRepository.BookKeeperObject"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.remote.DesiredCapabilities"/>
+    <fullyQualifiedTypeName name="objectRepository.APIObject"/>
+    <fullyQualifiedTypeName name="keywords.APIHelper"/>
+    <fullyQualifiedTypeName name="junit.framework.Assert"/>
+    <fullyQualifiedTypeName name="keywords.CSVReader"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="objectRepository.ClerkObject"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.support.ui.Sleeper"/>
+    <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="com.mysql.cj.log.Log"/>
+    <fullyQualifiedTypeName name="java.lang.System.Logger"/>
+    <fullyQualifiedTypeName name="java.lang.System.Logger.Level"/>
+    <fullyQualifiedTypeName name="net.bytebuddy.description.type.TypeDescription.Generic"/>
+    <fullyQualifiedTypeName name="keywords.SQLHelper"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.ElementNotInteractableException"/>
+    <fullyQualifiedTypeName name="org.junit.rules.TestName"/>
+    <fullyQualifiedTypeName name="org.junit.runner.Description"/>
+    <fullyQualifiedTypeName name="keywords.WorkingClassHeroes"/>
+    <fullyQualifiedTypeName name="keywords.Voucher"/>
+    <fullyQualifiedTypeName name="keywords.GenericKeywords"/>
+    <fullyQualifiedTypeName name="java.lang.AssertionError"/>
+</qualifiedTypeNameHistroy>

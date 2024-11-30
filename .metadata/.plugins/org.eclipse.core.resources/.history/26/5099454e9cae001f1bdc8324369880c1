@@ -1,0 +1,220 @@
+package keywords;
+
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.io.FileHandler;
+import org.openqa.selenium.io.Zip;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import java.io.*;
+import java.nio.file.*;
+import java.util.*;
+import java.util.concurrent.TimeUnit;
+import org.json.*;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+import java.time.Duration;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.ZoneOffset;
+import java.time.format.DateTimeFormatterBuilder;
+
+public class GenericKeywords {
+
+    public static Path project_path = Paths.get("").toAbsolutePath();
+    public static Path test_data_path = project_path.resolve("src/test/java/test-data");
+    public static Path test_output_path = project_path.resolve("test-output");
+    
+    public static void clearTestOutput(Path directoryPath) {
+        // Check if the directory exists
+        if (Files.exists(directoryPath) && Files.isDirectory(directoryPath)) {
+            try (DirectoryStream<Path> stream = Files.newDirectoryStream(directoryPath)) {
+                for (Path entry : stream) {
+                    if (Files.isDirectory(entry)) {
+                        // Recursively delete subdirectory
+                    	clearTestOutput(entry);
+                    }
+                    Files.delete(entry);
+                }
+                System.out.println("Directory cleared successfully.");
+            } catch (IOException e) {
+                System.err.println("Error clearing directory: " + e.getMessage());
+            }
+        } else {
+            System.out.println("Directory does not exist or is not a directory.");
+        }
+    }
+    
+    public static String testCurrentDateTime() {
+        // Get the current date and time in UTC
+        ZonedDateTime currentDateTime = ZonedDateTime.now(ZoneOffset.UTC);
+
+        // Add 8 hours to the current date and time
+        ZonedDateTime adjustedDateTime = currentDateTime.plusHours(8);
+
+        // Format the date and time in the desired format: YYYY-MM-DD HH:MM:SS.FFFFFF
+        DateTimeFormatter formatter = new DateTimeFormatterBuilder()
+                .appendPattern("yyyy-MM-dd HH:mm:ss.SSSSSS")
+                .toFormatter();
+        String formattedDateTime = adjustedDateTime.format(formatter);
+
+        // Print the formatted date and time
+        System.out.println("Test Start Date and Time: " + formattedDateTime);
+        return formattedDateTime;
+    }
+    
+    public static WebDriver startWebDriver() {
+    	WebDriverManager.chromedriver().setup();
+    	Map<String, Object> prefs = new Hashtable<String, Object>();
+        prefs.put("download.default_directory", test_output_path.toString());
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.setExperimentalOption("prefs", prefs);
+        WebDriver driver = new ChromeDriver(chromeOptions);
+		return driver;
+    }
+    
+    public static void quitWebDriver(WebDriver driver) {
+        driver.close();
+    }
+
+    // Method to replace null in a Map with "None"
+    public Map<String, Object> replaceNullInMap(Map<String, Object> jsonMap) {
+        for (Map.Entry<String, Object> entry : jsonMap.entrySet()) {
+            if (entry.getValue() == null) {
+                entry.setValue("None");
+            }
+        }
+        return jsonMap;
+    }
+
+    // Method to compare strings and log the comparison
+    public void compareStrings(String expectedString, String actualString, String compareTitle) {
+        System.out.println("Expected " + compareTitle + ":\n" + expectedString);
+        System.out.println("Actual " + compareTitle + ":\n" + actualString);
+        if (!expectedString.equals(actualString)) {
+            throw new AssertionError("Strings do not match!");
+        }
+    }
+
+    // Method to compare decimal values with formatting
+    public void compareDecimals(String expectedDecimal, String actualDecimal, String compareTitle) {
+        if (expectedDecimal.isEmpty()) {
+            compareStrings("None", actualDecimal, compareTitle);
+        } else {
+            double expectedValue = Double.parseDouble(expectedDecimal);
+            double actualValue = Double.parseDouble(actualDecimal);
+            expectedDecimal = String.format("%.2f", expectedValue);
+            actualDecimal = String.format("%.2f", actualValue);
+            compareStrings(expectedDecimal, actualDecimal, compareTitle);
+        }
+    }
+
+    // Method to compare date values with formatting
+    public void compareDate(String expectedDate, String actualDate, String compareTitle) {
+        if (expectedDate.isEmpty()) {
+            compareStrings("None", actualDate, compareTitle);
+        } else {
+            // Convert dates to the desired format and compare
+            // This example assumes date strings are in the format "yyyy-MM-dd HH:mm:ss.SSS"
+            compareStrings(expectedDate, actualDate, compareTitle);
+        }
+    }
+
+    // Method to validate JSON schema
+    public void validateJsonSchema(String schemaFileName, String responseBody) throws IOException {
+        String schemaContent = new String(Files.readAllBytes(Paths.get("./test-data/" + schemaFileName + ".json")));
+        JSONObject schema = new JSONObject(schemaContent);
+        JSONObject response = new JSONObject(responseBody);
+        // Assume using a library like json-schema-validator to validate
+        // jsonschema.validate(response, schema);
+        System.out.println("Validating JSON schema with the response body\nSchema:\n" + schemaContent);
+    }
+
+    // Method to log and print messages to the console
+    public void logToConsole(String msg) {
+        System.out.println("\n" + msg);
+    }
+
+//    // Method to click an element with scroll functionality
+//    public void clickElementWithScroll(By locator) {
+//        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
+//        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+//        element.click();
+//    }
+//
+//    // Method to input text with scroll functionality
+//    public void inputTextWithScroll(By locator, String value) {
+//        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+//        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+//        element.sendKeys(value);
+//    }
+
+    // Method to check if a page contains an element with scroll functionality
+    public void pageShouldContainElement(WebDriver driver, By locator) {
+
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+//        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+        if (!element.isDisplayed()) {
+            throw new AssertionError("Element not found: " + locator);
+        }
+    }
+//
+//    // Method to click an element with scroll and retry
+//    public void clickElementWithScrollAndRetry(By locator) {
+//        for (int i = 0; i < 10; i++) {
+//            try {
+//                clickElementWithScroll(locator);
+//                return;
+//            } catch (WebDriverException e) {
+//                try {
+//                    Thread.sleep(50); // Retry after short wait
+//                } catch (InterruptedException ie) {
+//                    Thread.currentThread().interrupt();
+//                }
+//            }
+//        }
+//        throw new AssertionError("Failed to click the element after retries: " + locator);
+//    }
+//
+//    // Method to input text with scroll and retry
+//    public void inputTextWithScrollAndRetry(By locator, String value) {
+//        for (int i = 0; i < 10; i++) {
+//            try {
+//                inputTextWithScroll(locator, value);
+//                return;
+//            } catch (WebDriverException e) {
+//                try {
+//                    Thread.sleep(50); // Retry after short wait
+//                } catch (InterruptedException ie) {
+//                    Thread.currentThread().interrupt();
+//                }
+//            }
+//        }
+//        throw new AssertionError("Failed to input text after retries: " + locator);
+//    }
+//
+//    // Method to check if a page contains an element with scroll and retry
+//    public void pageShouldContainElementWithScrollAndRetry(By locator) {
+//        for (int i = 0; i < 10; i++) {
+//            try {
+//                pageShouldContainElementWithScroll(locator);
+//                return;
+//            } catch (WebDriverException e) {
+//                try {
+//                    Thread.sleep(50); // Retry after short wait
+//                } catch (InterruptedException ie) {
+//                    Thread.currentThread().interrupt();
+//                }
+//            }
+//        }
+//        throw new AssertionError("Element not found after retries: " + locator);
+//    }
+}

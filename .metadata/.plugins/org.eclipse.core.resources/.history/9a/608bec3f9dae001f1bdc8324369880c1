@@ -1,0 +1,32 @@
+package objectRepository;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class LoginObject {
+	
+	static WebElement element = null;
+	
+	public static WebElement btn_submit_login(WebDriver driver) {
+		By locator = By.xpath("//input[@type='submit']");
+		return element;
+	}
+
+	public static WebElement lbl_header_login(WebDriver driver) {
+		By locator = By.xpath("//h1[normalize-space()='Working Class Hero System']");
+		return element;
+	}
+
+	public static WebElement input_username_login(WebDriver driver) {
+		
+		By locator = By.id("username-in");//input[@id='username-in']
+		return element;
+	}
+	
+	public static WebElement input_password_login(WebDriver driver) {
+		
+		By locator = By.id("password-in");//input[@id='password-in']
+		return element;
+	}
+}

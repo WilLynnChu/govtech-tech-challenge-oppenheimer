@@ -1,0 +1,16 @@
+package objectRepository;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class APIObject {
+	
+	static String api = null;
+	static String base_url = "http://localhost:9997";
+	static String base_api_url = "base_url}/api/v1";
+	static String create_hero_api = "base_api_url}/hero";
+	static String create_hero_voucher_api = "create_hero_api}/vouchers
+	static String get_hero_owe_money_api = "create_hero_api}/owe-money
+	static String get_voucher_by_person_type_api = "base_api_url}/voucher/by-person-and-type
+}

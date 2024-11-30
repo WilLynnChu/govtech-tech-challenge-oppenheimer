@@ -1,0 +1,107 @@
+package testCases;
+
+import java.util.List;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import keywords.CSVReader;
+import keywords.Clerk;
+import keywords.GenericKeywords;
+import keywords.Login;
+
+public class US2CreateHeroClerkDashboard extends Clerk{
+
+	public static String test_time;
+	public static WebDriver driver;
+	String role = "Clerk";
+	String positive_file_path = GenericKeywords.test_data_path + "/US2-data-positive.csv";
+	String negative_file_path = GenericKeywords.test_data_path + "/US2-data-negative.csv";
+	String negative_driver_file_path = GenericKeywords.test_data_path + "/US2-data-negative-driver.csv";
+	
+	
+	@BeforeTest
+	public void testSetUp() {
+		GenericKeywords.clearTestOutput(GenericKeywords.test_output_path);
+		test_time = GenericKeywords.testCurrentDateTime();
+		driver = GenericKeywords.startWebDriver();
+		
+	}
+	
+	@Test(description = "Test Case 1 - Clerk Dashboard Create Heroes Upload CSV File - Positive")
+	public void US2testCase1() {
+		List<List<String>> csvContent = setupClerkClearDBData(positive_file_path);
+		Login.OpenBrowserAndLogin(driver, role);
+		uploadCSVFilesViaClerkDashboard(driver, positive_file_path, "Positive");
+		verifyUploadedDataInDB(csvContent);
+	}
+	
+	@Test(description = "Test Case 2 - Clerk Dashboard Create Heroes Upload CSV File - Negative - Partial Data Wrong Format")
+	public void US2testCase2() {
+		setupClerkClearDBData(negative_file_path);
+		Login.OpenBrowserAndLogin(driver, role);
+		uploadCSVFilesViaClerkDashboard(driver, negative_file_path, "Negative");
+	}
+	
+	@Test(description = "Test Case 3 - Partial Data Wrong Format - Positive")
+	public void US2testCase3() {
+		List<List<String>> csvContent = CSVReader.readCSVWithoutHeader(negative_file_path);
+		verifyPartialUploadedDataInDB(csvContent, "Positive", "natid-150");
+		verifyPartialUploadedDataInDB(csvContent, "Positive", "natid-151");
+	}
+	
+	@Test(description = "Test Case 4 - Partial Data Wrong Format - Negative - name")
+	public void US2testCase4() {
+		List<List<String>> csvContent = CSVReader.readCSVWithoutHeader(negative_driver_file_path);
+		verifyPartialUploadedDataInDB(csvContent, "Negative", "natid-152");
+	}
+	
+	@Test(description = "Test Case 5 - Partial Data Wrong Format - Negative - gender - Missing")
+	public void US2testCase5() {
+		List<List<String>> csvContent = CSVReader.readCSVWithoutHeader(negative_driver_file_path);
+		verifyPartialUploadedDataInDB(csvContent, "Negative", "natid-153");
+	}
+	
+	@Test(description = "Test Case 6 - Partial Data Wrong Format - Negative - birth_date")
+	public void US2testCase6() {
+		List<List<String>> csvContent = CSVReader.readCSVWithoutHeader(negative_driver_file_path);
+		verifyPartialUploadedDataInDB(csvContent, "Negative", "natid-154");
+	}
+	
+	@Test(description = "Test Case 7 - Partial Data Wrong Format - Negative - salary")
+	public void US2testCase7() {
+		List<List<String>> csvContent = CSVReader.readCSVWithoutHeader(negative_driver_file_path);
+		verifyPartialUploadedDataInDB(csvContent, "Negative", "natid-155");
+	}
+	
+	@Test(description = "Test Case 8 - Partial Data Wrong Format - Negative - tax_paid")
+	public void US2testCase8() {
+		List<List<String>> csvContent = CSVReader.readCSVWithoutHeader(negative_driver_file_path);
+		verifyPartialUploadedDataInDB(csvContent, "Negative", "natid-156");
+	}
+	
+	@Test(description = "Test Case 9 - Partial Data Wrong Format - Positive - positive records before negative will still be created")
+	public void US2testCase9() {
+		List<List<String>> csvContent = CSVReader.readCSVWithoutHeader(negative_driver_file_path);
+		verifyPartialUploadedDataInDB(csvContent, "Positive", "natid-157");
+	}
+	
+	@Test(description = "Test Case 10 - Partial Data Wrong Format - Negative - gender - Wrong Format")
+	public void US2testCase10() {
+		List<List<String>> csvContent = CSVReader.readCSVWithoutHeader(negative_driver_file_path);
+		verifyPartialUploadedDataInDB(csvContent, "Negative", "natid-158");
+	}
+	
+	@Test(description = "Test Case 11 - Partial Data Wrong Format - Positive - positive records after negative will still be created")
+	public void US2testCase11() {
+		List<List<String>> csvContent = CSVReader.readCSVWithoutHeader(negative_driver_file_path);
+		verifyPartialUploadedDataInDB(csvContent, "Positive", "natid-159");
+	}
+	
+	@AfterTest
+	public void testTearDown() {
+		GenericKeywords.quitWebDriver(driver);
+	}
+}

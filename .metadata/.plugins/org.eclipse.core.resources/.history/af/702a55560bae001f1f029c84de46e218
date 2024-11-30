@@ -1,0 +1,8 @@
+package objectRepository;
+
+import org.openqa.selenium.WebElement;
+
+public class BookKeeperObject {
+
+	WebElement element = null;
+}

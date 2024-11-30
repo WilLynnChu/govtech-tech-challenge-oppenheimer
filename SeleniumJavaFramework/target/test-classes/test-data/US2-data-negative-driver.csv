@@ -1,0 +1,11 @@
+${natid},${flow},${negative_col_name}
+natid-150,Positive,
+natid-151,Positive,
+natid-152,Negative,name
+natid-153,Negative,gender
+natid-154,Negative,birth_date
+natid-155,Negative,salary
+natid-156,Negative,tax_paid
+natid-157,Positive,
+natid-158,Negative,gender
+natid-159,Positive,

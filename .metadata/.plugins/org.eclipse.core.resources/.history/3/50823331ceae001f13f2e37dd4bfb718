@@ -1,0 +1,14 @@
+name: Regression Suite
+verbose: 10
+configFailurePolicy: skip
+tests:
+  - name: Regression Test
+  verbose: 10
+  classes:
+    - testCases.US1CreateHeroAPI
+    - testCases.US2CreateHeroClerkDashboard
+    - testCases.US3TaxReliefGenerationBKDashboard
+    - testCases.US4CreateHeroWithVoucherAPI
+    - testCases.US5GetHeroOweMoneyAPI
+    - testCases.US6GetVoucherByPersonTypeAPI
+

@@ -1,0 +1,24 @@
+package objectRepository;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class BookKeeperObject {
+
+	static WebElement element = null;
+	
+	public static WebElement btn_generate_tax_relief_clerk(WebDriver driver) {
+		
+		element = driver.findElement(By.id("tax_relief_btn"))//button[@id='tax_relief_btn']
+		return element
+	}
+	
+	public static WebElement lbl_header_bk(WebDriver driver) {
+		element = driver.findElement(By.id("tax_relief_btn"))//button[@id='tax_relief_btn']
+		return element
+	}
+//
+//	#Labels
+//	${lbl_header_bk}    //h1[normalize-space()='Book Keeper Dashboard']
+}

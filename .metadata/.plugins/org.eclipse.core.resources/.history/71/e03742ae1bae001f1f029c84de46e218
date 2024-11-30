@@ -1,0 +1,48 @@
+package keywords;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import java.io.IOException;
+import java.util.Map;
+
+public class Login {
+
+    // Define the locators as static variables for simplicity
+    private static final By lblHeaderLogin = By.xpath("//h1[normalize-space()='Working Class Hero System']");
+    private static final By inputUsernameLogin = By.id("username-in");
+    private static final By inputPasswordLogin = By.id("password-in");
+    private static final By btnSubmitLogin = By.xpath("//input[@type='submit']");
+
+    public static void main(String[] args) {
+        // Initialize WebDriver
+        WebDriver driver = new ChromeDriver(); // Ensure chromedriver is set up in your environment
+        driver.get("http://your-website-url.com");
+
+        try {
+            // Get credentials for the specified role
+            Map<String, String> credentials = keywords.CSVReader.getLoginCredentials("book_keeper", "./test-data/role-credential.csv");
+
+            if (!credentials.isEmpty()) {
+                // Find elements and perform login actions
+                WebElement headerLabel = driver.findElement(lblHeaderLogin);
+                if (headerLabel.isDisplayed()) {
+                    WebElement usernameInput = driver.findElement(inputUsernameLogin);
+                    WebElement passwordInput = driver.findElement(inputPasswordLogin);
+                    WebElement submitButton = driver.findElement(btnSubmitLogin);
+
+                    usernameInput.sendKeys(credentials.get("username"));
+                    passwordInput.sendKeys(credentials.get("password"));
+                    submitButton.click();
+                }
+            } else {
+                System.out.println("Credentials not found for the specified role.");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            driver.quit();
+        }
+    }
+}

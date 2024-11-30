@@ -1,0 +1,19 @@
+${test_case_name},${flow},${natid},${name},${gender},${birthDate},${deathDate},${salary},${taxPaid},${browniePoints},${vouchers:voucherName},${vouchers:voucherType},${expectedStatus},${expectedErrMessage}
+Test Case 1 - Positive - Natid - Birth Date - Salary - Tax Paid,Positive,natid-51,John Bosh,MALE,1996-01-01T23:59:59,null,1000.12,10.00,null,VOUCHER 1,TRAVEL,200,
+Test Case 2 - Positive - Name,Positive,natid-52,Shawn,MALE,1996-01-01T23:59:59,null,1000.00,10.00,null,VOUCHER 2,FOOD,200,
+Test Case 3 - Positive - Gender MALE,Positive,natid-53,Justin,MALE,1996-01-01T23:59:59,null,1000.00,10.00,null,VOUCHER 3,TRAVEL,200,
+Test Case 4 - Positive - Gender FEMALE,Positive,natid-54,Grace,FEMALE,1996-01-01T23:59:59,null,1000.00,10.00,null,VOUCHER 4,TRAVEL,200,
+Test Case 5 - Positive - Death Date Null,Positive,natid-55,Yenn Yee,FEMALE,1996-01-01T23:59:59,null,1000.00,10.00,null,VOUCHER 5,FOOD,200,
+Test Case 6 - Positive - Brownie Points Null,Positive,natid-56,Angel,FEMALE,1996-01-01T23:59:59,null,1000.00,10.00,null,VOUCHER 6,TRAVEL,200,
+Test Case 7 - Positive - Brownie Points Not Null,Positive,natid-56,DeDe,FEMALE,1996-01-01T23:59:59,null,1000.00,10.00,5,VOUCHER 7,TRAVEL,200,
+Test Case 8 - Negative - Natid - Wrong Format,Negative,natid-5a,Yue Yue,FEMALE,1996-02-01T23:59:59,null,1001.00,11.00,null,VOUCHER 8,SPORT,400,
+Test Case 9 - Negative - Natid - Number Above 9999999,Negative,natid-9999999990,Beatrice,FEMALE,1996-02-01T23:59:59,null,1001.00,11.00,null,VOUCHER 9,TRAVEL,400,Invalid natid
+Test Case 10 - Negative - Name - Special Character,Negative,natid-61,Jennifer-Lopez,FEMALE,1996-02-01T23:59:59,null,1001.00,11.00,null,VOUCHER 10,TRAVEL,400,Invalid name
+Test Case 11 - Negative - Name - Number,Negative,natid-62,Jennifer9Lopez,FEMALE,1996-02-01T23:59:59,null,1001.00,11.00,null,VOUCHER 11,FOOD,400,Invalid name
+Test Case 12 - Negative - Name - More than 100 characters,Negative,natid-63,Jennifer Lopez Jennifer Lopez Jennifer Lopez Jennifer Lopez Jennifer Lopez Jennifer Lopez Jennifer Lopez,FEMALE,1996-02-01T23:59:59,null,1001.00,11.00,null,VOUCHER 12,FOOD,400,Name must be between 1 and 100 characters
+Test Case 13 - Negative - Gender - Invalid Capitalisation,Negative,natid-64,John Cena,male,1996-01-01T23:59:59,null,1000.00,10.00,null,VOUCHER 13,FOOD,400,Invalid gender
+Test Case 14 - Negative - Birth Date - Wrong Format,Negative,natid-65,John Cena,MALE,1996-01-01 23:59:59,null,1000.00,10.00,null,VOUCHER 14,SPORT,400,
+Test Case 15 - Negative - Birth Date - Future Date,Negative,natid-66,John Cena,MALE,3000-01-01T23:59:59,null,1000.00,10.00,null,VOUCHER 15,TRAVEL,400,There are some issues with working class hero
+Test Case 16 - Negative - Salary - String,Negative,natid-67,John Cena,MALE,1996-01-01T23:59:59,null,One Thousand,10.00,null,VOUCHER 16,SPORT,400,
+Test Case 17 - Negative - Salary - Negative Number,Negative,natid-68,John Cena,MALE,1996-01-01T23:59:59,null,-1000.00,10.00,null,VOUCHER 17,TRAVEL,400,Salary must be greater than or equals to zero
+Test Case 18 - Negative - Tax Paid - String,Negative,natid-69,John Cena,MALE,1996-01-01T23:59:59,null,1000.00,ten,null,VOUCHER 18,TRAVEL,400,

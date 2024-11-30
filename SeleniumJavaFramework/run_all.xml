@@ -1,0 +1,12 @@
+<suite name="Regression Suite" verbose="10">
+  <test thread-count="5" name="Regression Test">
+    <classes>
+      <class name="testCases.US1CreateHeroAPI"/>
+      <class name="testCases.US2CreateHeroClerkDashboard"/>
+      <class name="testCases.US3TaxReliefGenerationBKDashboard"/>
+      <class name="testCases.US4CreateHeroWithVoucherAPI"/>
+      <class name="testCases.US5GetHeroOweMoneyAPI"/>
+      <class name="testCases.US6GetVoucherByPersonTypeAPI"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

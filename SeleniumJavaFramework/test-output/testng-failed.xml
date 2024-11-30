@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Regression Suite]" verbose="10">
+  <test thread-count="5" name="Regression Test(failed)" verbose="10">
+    <classes>
+      <class name="testCases.US5GetHeroOweMoneyAPI">
+        <methods>
+          <include name="US5testCase1"/>
+          <include name="testSetUp"/>
+        </methods>
+      </class> <!-- testCases.US5GetHeroOweMoneyAPI -->
+      <class name="testCases.US3TaxReliefGenerationBKDashboard">
+        <methods>
+          <include name="testTearDown"/>
+          <include name="US3testCase1"/>
+          <include name="testSetUp"/>
+        </methods>
+      </class> <!-- testCases.US3TaxReliefGenerationBKDashboard -->
+      <class name="testCases.US2CreateHeroClerkDashboard">
+        <methods>
+          <include name="US2testCase4"/>
+          <include name="US2testCase11"/>
+          <include name="testSetUp"/>
+          <include name="US2testCase5"/>
+          <include name="US2testCase8"/>
+          <include name="US2testCase7"/>
+          <include name="US2testCase9"/>
+          <include name="testTearDown"/>
+          <include name="US2testCase6"/>
+        </methods>
+      </class> <!-- testCases.US2CreateHeroClerkDashboard -->
+      <class name="testCases.US1CreateHeroAPI">
+        <methods>
+          <include name="testSetUp"/>
+          <include name="US1testWithCsvData" invocation-numbers="16 20 5"/>
+        </methods>
+      </class> <!-- testCases.US1CreateHeroAPI -->
+      <class name="testCases.US4CreateHeroWithVoucherAPI">
+        <methods>
+          <include name="testSetUp"/>
+          <include name="US4testWithCsvData" invocation-numbers="8 11"/>
+        </methods>
+      </class> <!-- testCases.US4CreateHeroWithVoucherAPI -->
+    </classes>
+  </test> <!-- Regression Test(failed) -->
+</suite> <!-- Failed suite [Regression Suite] -->

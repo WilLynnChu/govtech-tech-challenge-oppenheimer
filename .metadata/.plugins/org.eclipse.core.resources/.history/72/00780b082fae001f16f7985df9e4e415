@@ -1,0 +1,27 @@
+package testCases;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.*;
+import keywords.GenericKeywords;
+import keywords.Login;
+import keywords.SQLHelper;
+
+public class US3TaxReliefGenerationBKDashboard {
+
+	public static String test_time;
+	
+	@BeforeTest
+	public void TestSetUp() {
+		test_time = GenericKeywords.testCurrentDateTime();
+        WebDriver driver = new ChromeDriver(); // Ensure chromedriver is set up in your environment
+		
+	}
+	
+	@Test
+	public void TestCase1() {
+		SQLHelper.queryDatabaseAndReturnResult("delete_file_by_status", null);
+		Login.OpenBrowserAndLogin(driver);
+	}
+	
+}
